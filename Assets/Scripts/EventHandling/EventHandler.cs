@@ -6,19 +6,33 @@ public enum RoundEndCondition { Pass, Fail };
 
 public class EventHandler : MonoBehaviour
 {
-    public StartRoundEvent _startRoundEvent = null;
-    public EndRoundEvent _endRoundEvent = null;
-    public PlayerCreatedEvent _playerCreatedEvent = null;
-    public DropBlockEvent _dropBlockEvent = null;
-    public BlockDiedEvent _blockDiedEvent = null;
+    //Game Events
+    public StartRoundEvent StartRoundEvent;
+    public EndRoundEvent EndRoundEvent;
+    public PlayerCreatedEvent PlayerCreatedEvent;
+    public DropBlockEvent DropBlockEvent;
+    public BlockDiedEvent BlockDiedEvent;
+
+    //Medals
+    public WobbliestMedal WobbliestMedal;
+    public EffortMedal EffortMedal;
+    public MostBlocksMedal MostBlocksMedal;
+    public WasterMedal WasterMedal;
 
     private void Awake()
     {
-        _startRoundEvent ??= new();
-        _endRoundEvent ??= new();
-        _playerCreatedEvent ??= new();
-        _dropBlockEvent ??= new();
-        _blockDiedEvent ??= new();
+        //Game Events
+        StartRoundEvent ??= new();
+        EndRoundEvent ??= new();
+        PlayerCreatedEvent ??= new();
+        DropBlockEvent ??= new();
+        BlockDiedEvent ??= new();
+
+        //Medals
+        WobbliestMedal ??= new();
+        EffortMedal ??= new();
+        MostBlocksMedal ??= new();
+        WasterMedal ??= new();
     }
 }
 
