@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Brain : MonoBehaviour
@@ -12,6 +13,9 @@ public class Brain : MonoBehaviour
 
     [field: SerializeField]
     public AdminControls AdminControls { get; set; } = null;
+
+    [field: SerializeField] 
+    public RoundManager RoundManager { get; set; } = null;
 
     private void Awake()
     {
