@@ -1,4 +1,5 @@
 using System.Collections;
+
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,4 +12,10 @@ public class AdminControls : MonoBehaviour
         Brain.ins.SceneHandler.UnloadScenes(new List<string>() { "Round", "Leaderboard", "GameScene" });
         Brain.ins.SceneHandler.LoadScenes(new List<string>() { "MainMenu" });
     }
+
+    public void TriggerEffortMedal()
+    {
+        Brain.ins.EventHandler.EffortMedal.Invoke(2);
+    }
+
 }
