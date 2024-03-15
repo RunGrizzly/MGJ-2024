@@ -7,7 +7,7 @@ public class Leaderboard : MonoBehaviour
         Brain.ins.EventHandler.EndRoundEvent.AddListener(SyncLeaderboard);
     }
 
-    private void SyncLeaderboard(RoundEndCondition context)
+    private void SyncLeaderboard(Round context)
     {
         Debug.LogFormat("Leaderboard received a sync call from an round with the {0} win condition", context.ToString());
     }

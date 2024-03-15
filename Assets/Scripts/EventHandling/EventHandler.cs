@@ -1,8 +1,4 @@
 using UnityEngine;
-using UnityEngine.Events;
-
-//TODO Kyoooooo move this to your round fool.
-public enum RoundEndCondition { Pass, Fail };
 
 public class EventHandler : MonoBehaviour
 {
@@ -35,5 +31,3 @@ public class EventHandler : MonoBehaviour
         WasterMedal ??= new();
     }
 }
-
-
