@@ -12,22 +12,21 @@ public class EventHandler : MonoBehaviour
     //Called when the game is ended and we want to pass a pass fail/condition to the leaderboard
     //This  should pass on the round object - for now a game end condition is fine
     public class EndRoundEvent : UnityEvent<RoundEndCondition> { };
+    
+    public class DropBlockEvent: UnityEvent { }
+    public class BlockDiedEvent: UnityEvent {}
 
     public StartRoundEvent _startRoundEvent = null;
     public EndRoundEvent _endRoundEvent = null;
+    public static DropBlockEvent DropBlock;
+    public static BlockDiedEvent BlockDied;
 
     private void Awake()
     {
-        if (_startRoundEvent == null)
-        {
-            _startRoundEvent = new();
-        }
-
-        if (_endRoundEvent == null)
-
-        {
-            _endRoundEvent = new();
-        }
+        _startRoundEvent ??= new();
+        _endRoundEvent ??= new();
+        DropBlock ??= new();
+        BlockDied ??= new();
     }
 }
 

@@ -4,6 +4,8 @@ public class Brain : MonoBehaviour
 {
     public static Brain ins = null;
 
+    public Controls Controls;
+
     [field: SerializeField]
     public SceneHandler SceneHandler { get; set; } = null;
 
@@ -12,9 +14,11 @@ public class Brain : MonoBehaviour
 
     [field: SerializeField]
     public AdminControls AdminControls { get; set; } = null;
-
+    
     private void Awake()
     {
         ins = this;
+        Controls = new Controls();
+        Controls.Enable();
     }
 }
