@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -172,25 +172,25 @@ MonoBehaviour:
       editorAssetGUID: 85dfa7cb83288224490c88aa2ff76f42
       name: MainMenu
       _path: Assets/Scenes/MainMenu.unity
-    loadInEditor: 1
+    loadInEditor: 0
     loadMethod: 3
   - scene:
       editorAssetGUID: c5df5f38578eb0e47a8fe41fb605fdd8
       name: GameScene
       _path: Assets/Scenes/GameScene.unity
-    loadInEditor: 1
+    loadInEditor: 0
     loadMethod: 3
   - scene:
       editorAssetGUID: 3a620415bdc2f974683711c4e647ed02
       name: Leaderboard
       _path: Assets/Scenes/Leaderboard.unity
-    loadInEditor: 1
+    loadInEditor: 0
     loadMethod: 3
   - scene:
       editorAssetGUID: 14c0773d62de1d944ae9b69e48c3c591
       name: Session
       _path: Assets/Scenes/Session.unity
-    loadInEditor: 1
+    loadInEditor: 0
     loadMethod: 3
   _isMainScene: 0
   _version: 1
@@ -289,6 +289,7 @@ GameObject:
   - component: {fileID: 1956209649}
   - component: {fileID: 1956209650}
   - component: {fileID: 1956209651}
+  - component: {fileID: 1956209652}
   m_Layer: 0
   m_Name: Brain
   m_TagString: Untagged
@@ -323,6 +324,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1627f9ed342798949953b1e082a3cf4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <SceneHandler>k__BackingField: {fileID: 1956209651}
+  <EventManager>k__BackingField: {fileID: 1956209652}
 --- !u!114 &1956209651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,6 +336,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5cf26831950b0a48b13a4a2ce6881e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1956209652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956209648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56327c1a3aad7ce4e8e6f9f0c8df300b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
