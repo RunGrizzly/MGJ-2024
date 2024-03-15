@@ -11,7 +11,7 @@ public class Leaderboard : MonoBehaviour
 
     }
 
-    private void SyncLeaderboard(GameEndCondition context)
+    private void SyncLeaderboard(RoundEndCondition context)
     {
         Debug.LogFormat("Leaderboard received a sync call from an round with the {0} win condition");
     }
