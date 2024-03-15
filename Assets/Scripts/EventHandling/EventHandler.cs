@@ -6,20 +6,11 @@ public enum RoundEndCondition { Pass, Fail };
 
 public class EventHandler : MonoBehaviour
 {
-    //A round is  each set of blocks that the player is given
-    public class StartRoundEvent : UnityEvent { };
-
-    //Called when the game is ended and we want to pass a pass fail/condition to the leaderboard
-    //This  should pass on the round object - for now a game end condition is fine
-    public class EndRoundEvent : UnityEvent<RoundEndCondition> { };
-    
-    public class DropBlockEvent: UnityEvent { }
-    public class BlockDiedEvent: UnityEvent {}
-
     public StartRoundEvent _startRoundEvent = null;
     public EndRoundEvent _endRoundEvent = null;
-    public static DropBlockEvent DropBlock;
-    public static BlockDiedEvent BlockDied;
+    public PlayerCreatedEvent _playerCreatedEvent = null;
+    public DropBlockEvent DropBlock;
+    public BlockDiedEvent BlockDied;
 
     private void Awake()
     {

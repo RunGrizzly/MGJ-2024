@@ -5,3 +5,6 @@ public class StartRoundEvent : UnityEvent { };
 
 //Called when the game is ended and we want ot pass a pass fail/condition to the leaderboard
 public class EndRoundEvent : UnityEvent<RoundEndCondition> { };
+
+//Called when a new Player is created;
+public class PlayerCreatedEvent : UnityEvent<Player> { }
