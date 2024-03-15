@@ -36,7 +36,7 @@ public class BlockSpawner : MonoBehaviour
         var size = meshRenderer.bounds.size;
         _objectWidth = size.x;
 
-        actionButton = Brain.Ins.Controls.FindAction("Everything");
+        actionButton = Brain.ins.Controls.FindAction("Everything");
         EventHandler.BlockDied.AddListener(SpawnBlock);
         
         SpawnBlock();
