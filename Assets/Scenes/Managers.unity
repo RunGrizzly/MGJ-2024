@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -178,7 +178,7 @@ MonoBehaviour:
       editorAssetGUID: c5df5f38578eb0e47a8fe41fb605fdd8
       name: GameScene
       _path: Assets/Scenes/GameScene.unity
-    loadInEditor: 0
+    loadInEditor: 1
     loadMethod: 3
   - scene:
       editorAssetGUID: 3a620415bdc2f974683711c4e647ed02
@@ -325,7 +325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <SceneHandler>k__BackingField: {fileID: 1956209651}
-  <EventManager>k__BackingField: {fileID: 1956209652}
+  <EventHandler>k__BackingField: {fileID: 1956209652}
 --- !u!114 &1956209651
 MonoBehaviour:
   m_ObjectHideFlags: 0

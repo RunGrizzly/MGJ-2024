@@ -565,7 +565,6 @@ GameObject:
   - component: {fileID: 1557418810}
   - component: {fileID: 1557418809}
   - component: {fileID: 1557418808}
-  - component: {fileID: 1557418812}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -659,18 +658,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1557418812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1557418807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc2f830dbe2a3fe4e8e662f8772459ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1655649390
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,15 +795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _version: 2
   _crossSceneReferences: []
-  _realSceneRootsForPostBuild:
-  - {fileID: 1877138599}
-  - {fileID: 416595641}
-  - {fileID: 1557418807}
-  - {fileID: 1655649390}
-  - {fileID: 1106669099}
-  - {fileID: 823070828}
-  - {fileID: 439969535}
-  - {fileID: 1990192522}
+  _realSceneRootsForPostBuild: []
   _mergedScenes: []
 --- !u!114 &1877138601
 MonoBehaviour:

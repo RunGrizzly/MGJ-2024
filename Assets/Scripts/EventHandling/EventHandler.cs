@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 public enum GameEndCondition { Pass, Fail };
 
-public class EventManager : MonoBehaviour
+public class EventHandler : MonoBehaviour
 {
     //A round is  each set of blocks that the player is given
     public class StartRoundEvent : UnityEvent { };
