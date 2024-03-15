@@ -20,7 +20,7 @@ public class MainMenu : MonoBehaviour
 
     private void Update()
     {
-        if (_readyToPlay && Input.GetKeyDown(KeyCode.Space))
+        if (_readyToPlay && Brain.ins.Controls.Player.Everything.WasPressedThisFrame())
         {
             RequestNewRound();
         }

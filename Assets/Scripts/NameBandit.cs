@@ -21,8 +21,7 @@ namespace DefaultNamespace
         {
             if(nameChosen) return;
             
-            // TODO: Update to Input System
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Brain.ins.Controls.Player.Everything.WasPressedThisFrame())
             {
                 var word = _sections[_chosenSectionCount].Stop();
                 _chosenWords.Add(word);

@@ -8,3 +8,7 @@ public class EndRoundEvent : UnityEvent<RoundEndCondition> { };
 
 //Called when a new Player is created;
 public class PlayerCreatedEvent : UnityEvent<Player> { }
+
+public class DropBlockEvent: UnityEvent { }
+
+public class BlockDiedEvent: UnityEvent {}

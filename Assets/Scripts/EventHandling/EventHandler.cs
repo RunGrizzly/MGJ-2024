@@ -9,15 +9,16 @@ public class EventHandler : MonoBehaviour
     public StartRoundEvent _startRoundEvent = null;
     public EndRoundEvent _endRoundEvent = null;
     public PlayerCreatedEvent _playerCreatedEvent = null;
-    public DropBlockEvent DropBlock;
-    public BlockDiedEvent BlockDied;
+    public DropBlockEvent _dropBlockEvent = null;
+    public BlockDiedEvent _blockDiedEvent = null;
 
     private void Awake()
     {
         _startRoundEvent ??= new();
         _endRoundEvent ??= new();
-        DropBlock ??= new();
-        BlockDied ??= new();
+        _playerCreatedEvent ??= new();
+        _dropBlockEvent ??= new();
+        _blockDiedEvent ??= new();
     }
 }
 
