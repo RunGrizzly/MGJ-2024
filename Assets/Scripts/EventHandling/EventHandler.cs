@@ -9,6 +9,7 @@ public class EventHandler : MonoBehaviour
     //Game Events
     public StartRoundEvent StartRoundEvent;
     public EndRoundEvent EndRoundEvent;
+    public PlayerCreatedEvent PlayerCreatedEvent;
     public DropBlockEvent DropBlockEvent;
     public BlockDiedEvent BlockDiedEvent;
 
@@ -23,6 +24,7 @@ public class EventHandler : MonoBehaviour
         //Game Events
         StartRoundEvent ??= new();
         EndRoundEvent ??= new();
+        PlayerCreatedEvent ??= new();
         DropBlockEvent ??= new();
         BlockDiedEvent ??= new();
 
