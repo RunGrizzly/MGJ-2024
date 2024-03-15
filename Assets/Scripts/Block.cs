@@ -14,7 +14,7 @@ public class Block : MonoBehaviour
         {
             Debug.LogError("Objects need a RigidBody");
         }
-        EventHandler.DropBlockEvent.AddListener(Drop);
+        Brain.ins.EventHandler.DropBlockEvent.AddListener(Drop);
     }
 
     void FixedUpdate()

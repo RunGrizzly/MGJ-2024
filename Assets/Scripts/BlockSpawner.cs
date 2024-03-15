@@ -37,7 +37,7 @@ public class BlockSpawner : MonoBehaviour
         _objectWidth = size.x;
 
         actionButton = Brain.ins.Controls.FindAction("Everything");
-        EventHandler.BlockDiedEvent.AddListener(SpawnBlock);
+        Brain.ins.EventHandler.BlockDiedEvent.AddListener(SpawnBlock);
 
         SpawnBlock();
         StartMovement();
@@ -57,7 +57,7 @@ public class BlockSpawner : MonoBehaviour
     {
         if (actionButton.WasPressedThisFrame())
         {
-            EventHandler.DropBlockEvent.Invoke();
+            Brain.ins.EventHandler.DropBlockEvent.Invoke();
             LeanTween.cancel(gameObject);
             LeanTween.moveX(gameObject, 0f, 0.2f);
         }
