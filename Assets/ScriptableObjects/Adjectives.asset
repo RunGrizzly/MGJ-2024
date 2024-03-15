@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36016d5c4b264b8498910ad67e25fdad, type: 3}
+  m_Name: Adjectives
+  m_EditorClassIdentifier: 
+  Words:
+  - Happy
+  - Brave
+  - Funny
+  - Kind
+  - Smart
+  - Bright
+  - Shiny
+  - Sweet
+  - Gentle
+  - Silly
+  - Friendly
+  - Clever
+  - Jolly
+  - Lively
+  - Colorful
+  - Playful
+  - Polite
+  - Caring
+  - Curious
+  - Creative
+  - Cheery
+  - Helpful
+  - Joyful
+  - Honest
+  - Warm
+  - Loving
+  - Magical
+  - Peaceful
+  - Sincere
+  - Thoughtful
+  - Brave
+  - Excited
+  - Charming
+  - Fancy
+  - Lucky
+  - Sensitive
+  - Talented
+  - Eager
+  - Curly
+  - Brave
+  - Bright
+  - Merry
+  - Sparkling
+  - Wise
+  - Fancy
+  - Soft
+  - Delightful
+  - Generous
+  - Bubbly
+  - Unique
