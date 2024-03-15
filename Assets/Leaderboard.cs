@@ -7,7 +7,7 @@ public class Leaderboard : MonoBehaviour
 {
     private void OnEnable()
     {
-        Brain.ins.EventHandler._endRoundEvent.AddListener(SyncLeaderboard);
+        Brain.ins.EventHandler.EndRoundEvent.AddListener(SyncLeaderboard);
     }
 
     private void SyncLeaderboard(RoundEndCondition context)

@@ -10,12 +10,12 @@ public class BlockSpawner : MonoBehaviour
     private bool _isMovingRight = true;
     private bool _isHoldingBlock = false;
     private InputAction actionButton;
-    
+
     [SerializeField]
     private float speed = 0f;
 
     public List<Object> blocks;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,11 +24,11 @@ public class BlockSpawner : MonoBehaviour
             Debug.LogError("MainCamera is not tagged, that's why you can't see anything");
             return;
         }
-        
+
         var main = Camera.main;
         var position = main.transform.position;
         var orthographicSize = main.orthographicSize;
-        
+
         _screenLeftBorder = position.x - orthographicSize * Screen.width / Screen.height;
         _screenRightBorder = position.x + orthographicSize * Screen.width / Screen.height;
 
@@ -37,8 +37,8 @@ public class BlockSpawner : MonoBehaviour
         _objectWidth = size.x;
 
         actionButton = Brain.ins.Controls.FindAction("Everything");
-        EventHandler.BlockDied.AddListener(SpawnBlock);
-        
+        EventHandler.BlockDiedEvent.AddListener(SpawnBlock);
+
         SpawnBlock();
         StartMovement();
     }
@@ -57,9 +57,9 @@ public class BlockSpawner : MonoBehaviour
     {
         if (actionButton.WasPressedThisFrame())
         {
-           EventHandler.DropBlock.Invoke();
-           LeanTween.cancel(gameObject);
-           LeanTween.moveX(gameObject, 0f, 0.2f);
+            EventHandler.DropBlockEvent.Invoke();
+            LeanTween.cancel(gameObject);
+            LeanTween.moveX(gameObject, 0f, 0.2f);
         }
     }
 
@@ -70,18 +70,18 @@ public class BlockSpawner : MonoBehaviour
 
         LeanTween.moveX(gameObject, _isMovingRight ? _screenRightBorder : _screenLeftBorder, speed * 2);
     }
-    
+
     private void SpawnBlock()
     {
         var block = blocks[Random.Range(0, blocks.Count - 1)];
 
         var t = transform;
         var p = t.position;
-        Instantiate(block, 
-            new Vector3(p.x, p.y - 1f, p.z), 
+        Instantiate(block,
+            new Vector3(p.x, p.y - 1f, p.z),
             Quaternion.identity,
             t);
-        
+
         StartMovement();
     }
 

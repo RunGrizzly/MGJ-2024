@@ -6,23 +6,23 @@ public class Block : MonoBehaviour
 {
     private Rigidbody _rigidBody;
     private bool _isGrounded, _isReleased;
-    
+
     void Start()
-     {
+    {
         _rigidBody = GetComponent<Rigidbody>();
         if (_rigidBody == null)
         {
             Debug.LogError("Objects need a RigidBody");
         }
-        EventHandler.DropBlock.AddListener(Drop);
+        EventHandler.DropBlockEvent.AddListener(Drop);
     }
 
     void FixedUpdate()
     {
-        if(_isGrounded) return;
+        if (_isGrounded) return;
         if (!_isReleased) return;
         if (!HasComeToAStop()) return;
-        
+
         _isGrounded = true;
     }
 
@@ -39,7 +39,7 @@ public class Block : MonoBehaviour
         transform.parent = null;
         _rigidBody.isKinematic = false;
         _isReleased = true;
-        
+
         Debug.Log("Dropped a block");
     }
 
