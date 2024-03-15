@@ -10,9 +10,18 @@ public class SceneHandler : MonoBehaviour
             Display.displays[i].Activate();
         }
 
-        SceneManager.LoadSceneAsync("Session", LoadSceneMode.Additive);
-        SceneManager.LoadSceneAsync("Leaderboard", LoadSceneMode.Additive);
-        SceneManager.LoadSceneAsync("GameScene", LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync("MainMenu", LoadSceneMode.Additive);
+        // SceneManager.LoadSceneAsync("Leaderboard", LoadSceneMode.Additive);
+        // SceneManager.LoadSceneAsync("GameScene", LoadSceneMode.Additive);
     }
+
+
+    private void LoadScene(string sceneName)
+
+    {
+
+
+    }
+
 
 }
