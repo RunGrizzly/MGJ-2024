@@ -316,7 +316,7 @@ MonoBehaviour:
       editorAssetGUID: 3a620415bdc2f974683711c4e647ed02
       name: Leaderboard
       _path: Assets/Scenes/Leaderboard.unity
-    loadInEditor: 0
+    loadInEditor: 1
     loadMethod: 3
   - scene:
       editorAssetGUID: 14c0773d62de1d944ae9b69e48c3c591
