@@ -7,7 +7,7 @@ public class AdminControls : MonoBehaviour
 {
     public void KickToMainMenu()
     {
-        Brain.ins.EventHandler.EndRoundEvent.Invoke(RoundEndCondition.Pass);
+        Brain.ins.EventHandler.EndRoundEvent.Invoke(Brain.ins.RoundManager.CurrentRound);
 
         Brain.ins.SceneHandler.UnloadScenes(new List<string>() { "Round", "Leaderboard", "GameScene" });
         Brain.ins.SceneHandler.LoadScenes(new List<string>() { "MainMenu" });
