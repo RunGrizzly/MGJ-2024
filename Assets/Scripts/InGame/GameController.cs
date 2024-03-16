@@ -6,6 +6,8 @@ namespace DefaultNamespace
     {
         [SerializeField] private GameObject _blockSpawnerPrefab;
         private GameObject _blockSpawner;
+
+        [SerializeField] private MaxHeightTracker _maxHeightTracker;
         private void OnEnable()
         {
             Brain.ins.EventHandler.StartRoundEvent.AddListener(OnStartRound);
@@ -27,10 +29,9 @@ namespace DefaultNamespace
             _blockSpawner.SetActive(false);
         }
 
-        private void OnDisable()
-        {
-            Brain.ins.EventHandler.StartRoundEvent.RemoveListener(OnStartRound);
-            Brain.ins.EventHandler.EndRoundEvent.RemoveListener(OnEndRound);
-        }
+    private void OnDisable()
+    {
+        Brain.ins.EventHandler.StartRoundEvent.RemoveListener(OnStartRound);
+        Brain.ins.EventHandler.EndRoundEvent.RemoveListener(OnEndRound);
     }
 }
