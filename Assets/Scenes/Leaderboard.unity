@@ -208,7 +208,7 @@ Transform:
   m_GameObject: {fileID: 73321888}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 46.1, z: -10}
+  m_LocalPosition: {x: 0, y: 5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -373,7 +373,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1192714
+  m_Name: pb_Mesh-152938
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -561,8 +561,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f22da7a52c365e74d928b43aec524933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _leaderBoardCanvasGroup: {fileID: 0}
-  _medalWidgetTemplate: {fileID: 0}
+  _leaderBoardCanvasGroup: {fileID: 908040045}
+  _medalWidgetTemplate: {fileID: 8900949869789195039, guid: cad2e05126d10e54295c671dc3405450,
+    type: 3}
   medalMap:
     m_keys: 
     m_values: []
@@ -633,7 +634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
+  m_ScaleFactor: 2
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
@@ -897,7 +898,7 @@ Transform:
   m_GameObject: {fileID: 1289181975}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 46.1, z: -10}
+  m_LocalPosition: {x: 0, y: 5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1203,6 +1204,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LeaderboardSky
+      objectReference: {fileID: 0}
+    - target: {fileID: 5673445390496660962, guid: 3e40a726944d03f4cb5d6304ee6d1dd2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8845443695114578171, guid: 3e40a726944d03f4cb5d6304ee6d1dd2,
         type: 3}

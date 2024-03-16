@@ -15,8 +15,11 @@ public class Brain : MonoBehaviour
     [field: SerializeField]
     public AdminControls AdminControls { get; set; } = null;
 
-    [field: SerializeField] 
+    [field: SerializeField]
     public RoundManager RoundManager { get; set; } = null;
+
+    [field: SerializeField]
+    public AudioManager AudioManager { get; set; } = null;
 
     private void Awake()
     {
