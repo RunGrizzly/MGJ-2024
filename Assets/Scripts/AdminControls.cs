@@ -13,8 +13,18 @@ public class AdminControls : MonoBehaviour
         Brain.ins.SceneHandler.LoadScenes(new List<string>() { "MainMenu" });
     }
 
+    public void TriggerWobblyMedal()
+    {
+        Brain.ins.EventHandler.MedalEarnedEvent.Invoke(Brain.ins.RoundManager.CurrentRound.Player, MedalType.WobbliestPlayer);
+    }
+
     public void TriggerEffortMedal()
     {
-        Brain.ins.EventHandler.MedalEarnedEvent.Invoke(new Player("A fake name"), MedalType.WobbliestPlayer);
+        Brain.ins.EventHandler.MedalEarnedEvent.Invoke(Brain.ins.RoundManager.CurrentRound.Player, MedalType.Effort);
+    }
+
+    public void TriggerWasterMedal()
+    {
+        Brain.ins.EventHandler.MedalEarnedEvent.Invoke(Brain.ins.RoundManager.CurrentRound.Player, MedalType.Waster);
     }
 }

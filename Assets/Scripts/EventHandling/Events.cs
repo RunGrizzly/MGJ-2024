@@ -8,4 +8,4 @@ public class DropBlockEvent : UnityEvent { }
 public class BlockSettledEvent : UnityEvent<GameObject> { }
 
 //Audio
-public class PlaySFXEvent : UnityEvent<AudioClip> { }
+public class PlaySFXEvent : UnityEvent<AudioClip, float> { }
