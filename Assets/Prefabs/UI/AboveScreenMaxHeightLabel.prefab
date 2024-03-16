@@ -108,6 +108,8 @@ GameObject:
   - component: {fileID: 3189463495728051846}
   - component: {fileID: 5210816581787056288}
   - component: {fileID: 384455865150508216}
+  - component: {fileID: 8671047738601127918}
+  - component: {fileID: 4903315780902327295}
   m_Layer: 5
   m_Name: AboveScreenMaxHeightLabel
   m_TagString: Untagged
@@ -185,6 +187,33 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!225 &8671047738601127918
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3947571790053748824}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &4903315780902327295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3947571790053748824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daceaa9b888bda8469604ecb89af7559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _canvasGroup: {fileID: 8671047738601127918}
+  _text: {fileID: 7908600788406696178}
+  _rectTransform: {fileID: 3489395882854754777}
 --- !u!1 &5066699060585988961
 GameObject:
   m_ObjectHideFlags: 0
