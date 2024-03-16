@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEditor.PackageManager;
 using UnityEngine;
 
@@ -17,23 +18,6 @@ public class Block : MonoBehaviour
         Brain.ins.EventHandler.DropBlockEvent.AddListener(Drop);
     }
 
-    void FixedUpdate()
-    {
-        if (_isGrounded) return;
-        if (!_isReleased) return;
-        if (!HasComeToAStop()) return;
-
-        _isGrounded = true;
-    }
-
-    private void Update()
-    {
-        if (_isGrounded)
-        {
-            //EventHandler.BlockDied.Invoke();
-        }
-    }
-
     private void Drop()
     {
         transform.parent = null;
@@ -47,5 +31,17 @@ public class Block : MonoBehaviour
     {
         Debug.Log(_rigidBody.velocity.y == 0);
         return _rigidBody.velocity.y == 0;
+    }
+
+    void OnCollisionStay(Collision collisionInfo)
+    {
+        if (!_isGrounded)
+        {
+            if (collisionInfo.gameObject.layer == 6)
+            {
+                _isGrounded = true;
+                Brain.ins.EventHandler.BlockSettledEvent.Invoke(gameObject);
+            }
+        }
     }
 }

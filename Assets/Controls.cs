@@ -42,7 +42,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""af3ea49d-4c9f-45d8-908b-9f64dfafb6ac"",
                     ""path"": ""<Keyboard>/space"",
-                    ""interactions"": """",
+                    ""interactions"": ""MultiTap(tapDelay=0.2),Tap"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Everything"",
