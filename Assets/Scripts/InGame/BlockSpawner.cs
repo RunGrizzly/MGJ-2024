@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using JetBrains.Annotations;
-using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,7 +10,8 @@ public class BlockSpawner : MonoBehaviour
     private bool _isMovingRight = true;
     private InputAction _actionButton;
 
-    [SerializeField] private float speed = 0f;
+    [SerializeField]
+    private float speed = 0f;
 
     public List<Object> blocks;
 
@@ -89,4 +89,5 @@ public class BlockSpawner : MonoBehaviour
     {
         LeanTween.moveX(gameObject, _isMovingRight ? _screenRightBorder : _screenLeftBorder, speed);
     }
+    
 }

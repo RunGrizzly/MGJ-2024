@@ -12,10 +12,7 @@ namespace DefaultNamespace
         private List<string> _chosenWords = new();
         private bool nameChosen = false;
 
-        // private void Start()
-        // {
-        //     _sections = GetComponentsInChildren<NameBanditSection>().ToList();
-        // }
+        [SerializeField] private List<AudioClip> sectionBlips = new List<AudioClip>();
 
         private void Update()
         {
@@ -25,7 +22,13 @@ namespace DefaultNamespace
             {
                 var word = _sections[_chosenSectionCount].Stop();
                 _chosenWords.Add(word);
+
+                Brain.ins.EventHandler.PlaySFXEvent.Invoke(sectionBlips[+_chosenSectionCount]);
+
                 _chosenSectionCount += 1;
+
+
+
             }
 
             if (_chosenSectionCount == _sections.Count)

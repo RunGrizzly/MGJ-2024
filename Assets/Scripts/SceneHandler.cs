@@ -22,11 +22,6 @@ public class SceneHandler : MonoBehaviour
         }
 
         LoadScenes(new List<Scene> { Scene.MainMenu, Scene.GameScene, Scene.Leaderboard });
-
-        Brain.ins.EventHandler.EndRoundEvent.AddListener((context) =>
-        {
-            Debug.LogFormat("The round ended with the {0} condition", context.ToString());
-        });
     }
 
     public void LoadScenes(List<string> sceneNames)

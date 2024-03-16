@@ -12,9 +12,9 @@ public class EventHandler : MonoBehaviour
 
     //Medals
     public MedalEarnedEvent MedalEarnedEvent;
-    // public EffortMedal EffortMedal;
-    // public MostBlocksMedal MostBlocksMedal;
-    // public WasterMedal WasterMedal;
+
+    //Audio
+    public PlaySFXEvent PlaySFXEvent;
 
     private void Awake()
     {
@@ -28,8 +28,8 @@ public class EventHandler : MonoBehaviour
 
         //Medals
         MedalEarnedEvent ??= new();
-        // EffortMedal ??= new();
-        // MostBlocksMedal ??= new();
-        // WasterMedal ??= new();
+
+        //Audio
+        PlaySFXEvent ??= new();
     }
 }
