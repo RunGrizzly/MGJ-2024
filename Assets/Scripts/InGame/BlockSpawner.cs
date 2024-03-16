@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,11 +9,12 @@ public class BlockSpawner : MonoBehaviour
 {
     private float _screenLeftBorder, _screenRightBorder = 0.0f;
     private float _objectWidth;
-    private bool _isMovingRight, _isHoldingBlock = true;
+    private bool _isMovingRight = true;
+    private Block _heldBlock;
+    private bool _isHoldingBlock => _heldBlock != null;
     private InputAction _actionButton;
 
-    [SerializeField]
-    private float speed = 0f;
+    [SerializeField] private float speed = 0f;
 
     public List<Object> blocks;
 
@@ -20,14 +22,14 @@ public class BlockSpawner : MonoBehaviour
     void Start()
     {
         CalculateCameraBounds();
-        
+
         var meshRenderer = GetComponent<MeshRenderer>();
         var size = meshRenderer.bounds.size;
         _objectWidth = size.x;
 
         _actionButton = Brain.ins.Controls.FindAction("Everything");
         Brain.ins.EventHandler.BlockSettledEvent.AddListener(IncrementHeight);
-        
+
         SpawnBlock();
         StartMovement();
     }
@@ -47,10 +49,11 @@ public class BlockSpawner : MonoBehaviour
         {
             CalculateCameraBounds();
         }
+
         if (!_actionButton.WasPressedThisFrame() || !_isHoldingBlock) return;
 
-        _isHoldingBlock = false;
-        Brain.ins.EventHandler.DropBlockEvent.Invoke();
+        Brain.ins.EventHandler.DropBlockEvent.Invoke(_heldBlock);
+        _heldBlock = null;
     }
 
     private void CalculateCameraBounds()
@@ -81,27 +84,24 @@ public class BlockSpawner : MonoBehaviour
     {
         //LeanTween.cancel(gameObject);
         //LeanTween.moveY(gameObject, transform.position.y + 1f, 0.2f).setOnComplete(StartMovement);
-        
+
         SpawnBlock();
     }
-    
+
     private void SpawnBlock()
     {
         var block = blocks[Random.Range(0, blocks.Count - 1)];
-        
+
         var t = transform;
         var p = t.position;
-        Instantiate(block,
+        _heldBlock = Instantiate(block,
             new Vector3(p.x, p.y - 1f, p.z),
             Quaternion.identity,
-            t);
-        _isHoldingBlock = true;
-
+            t).GetComponent<Block>();
     }
 
     private void StartMovement()
     {
         LeanTween.moveX(gameObject, _isMovingRight ? _screenRightBorder : _screenLeftBorder, speed);
     }
-    
 }
