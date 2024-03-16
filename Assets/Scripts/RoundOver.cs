@@ -43,6 +43,7 @@ public class RoundOver : MonoBehaviour
         {
             Brain.ins.SceneHandler.UnloadScenes(new List<Scene>{Scene.RoundOver});
             Brain.ins.SceneHandler.LoadScenes(new List<Scene>{Scene.MainMenu});
+            Brain.ins.RoundManager.SessionOver();
             Debug.Log("Go back to menu, bitch!");
         }
     }
