@@ -34,7 +34,7 @@ public class Leaderboard : MonoBehaviour
 
     private void DisplayMedal(Player player, MedalType medalType)
     {
-        SpawnWidget();
+        SpawnWidget(medalType);
 
         if (!medalMap.Contains(medalType))
         {
@@ -45,7 +45,7 @@ public class Leaderboard : MonoBehaviour
             medalMap[medalType] = player;
         }
 
-        Debug.LogFormat("{0} achieved {1}", player.Name, medalType.ToString());
+        // Debug.LogFormat("{0} achieved {1}", player.Name, medalType.ToString());
     }
 
     private void SyncLeaderboard(Round context)
@@ -54,7 +54,7 @@ public class Leaderboard : MonoBehaviour
     }
 
 
-    private void SpawnWidget()
+    private void SpawnWidget(MedalType medalType)
     {
         if (_medalWidgetInstance != null)
         {
@@ -64,8 +64,14 @@ public class Leaderboard : MonoBehaviour
         }
 
         _medalWidgetInstance = Instantiate(_medalWidgetTemplate, _leaderBoardCanvasGroup.transform);
+        _medalWidgetInstance.WidgetText.text = medalType.ToString();
 
-        Brain.ins.EventHandler.PlaySFXEvent.Invoke(_medalWidgetInstance.MedalSpawnSting, 0);
+        if (!Brain.ins.AudioManager.IsBusy())
+        {
+            Brain.ins.EventHandler.PlaySFXEvent.Invoke(_medalWidgetInstance.MedalSpawnSting, 0);
+            Brain.ins.EventHandler.PlaySFXEvent.Invoke(_medalWidgetInstance.MedalJingleSting, 0);
+            Brain.ins.EventHandler.PlaySFXEvent.Invoke(_medalWidgetInstance.MedalWhooshSting, 0.5f);
+        }
 
         LeanTween.value(gameObject, 0, 1, 0.5f).setEase(LeanTweenType.easeOutElastic)
 
@@ -78,7 +84,6 @@ public class Leaderboard : MonoBehaviour
         {
             LeanTween.delayedCall(gameObject, 0.85f, () =>
             {
-                Brain.ins.EventHandler.PlaySFXEvent.Invoke(_medalWidgetInstance.MedalWhooshSting, 0);
                 LeanTween.value(0, Screen.width, 0.6f).setEase(LeanTweenType.easeOutExpo)
 
 

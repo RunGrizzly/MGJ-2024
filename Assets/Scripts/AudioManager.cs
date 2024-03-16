@@ -14,6 +14,11 @@ public class AudioManager : MonoBehaviour
         // Brain.ins.EventHandler.MedalEarnedEvent.AddListener(OnMedalEarned);
     }
 
+    public bool IsBusy()
+    {
+        return _audioSource.isPlaying;
+    }
+
     // private void OnMedalEarned(Player player, MedalType medalType)
     // {
     //     PlaySFX(_medalEarnedSting);
@@ -21,9 +26,7 @@ public class AudioManager : MonoBehaviour
 
     private void PlaySFX(AudioClip newSFX, float start = 0)
     {
-        _audioSource.clip = newSFX;
-        _audioSource.time = start;
-        _audioSource.Play();
+        LeanTween.delayedCall(start, () => _audioSource.PlayOneShot(newSFX));
         //_audioSource.PlayOneShot(newSFX);
     }
 }

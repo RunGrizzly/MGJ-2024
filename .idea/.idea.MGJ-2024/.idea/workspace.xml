@@ -4,25 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1aa1de97-9200-4616-b30c-235fc6fd9684" name="Changes" comment="Added MaxHeightTracker to Round Scene">
-      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Lava.shadergraph" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Lava.shadergraph.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Lava_mat.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Lava_mat.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Skybox.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Skybox.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Melt 6 - 512x512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/Melt 6 - 512x512.png.meta" afterDir="false" />
+    <list default="true" id="1aa1de97-9200-4616-b30c-235fc6fd9684" name="Changes" comment="Merge conflicts">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InGame/CurrentHeightTracker.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InGame/CurrentHeightTracker.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MGJ-2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MGJ-2024/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Leaderboard.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Leaderboard.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Managers.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Managers.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Round.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Round.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGame/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGame/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Round/Round.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Round/Round.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Round/RoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Round/RoundManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +26,7 @@
     <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/36128ec596ab42c8af4441b8e0cdd33a1a2c00/65/84d8d7bb/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/AdminControls.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/AdminControls.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Leaderboard.cs" root0="SKIP_HIGHLIGHTING" />
@@ -74,11 +62,14 @@
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/Block.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/Block.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/Block.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/Block.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/EventHandling/EventHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/EventHandling/Events.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/EventHandling/Events.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/EventHandling/Events.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/EventHandling/Events.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/EventHandling/Events.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/BlockSpawner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/BlockSpawner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/BlockSpawner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/BlockSpawner.cs" root0="SKIP_HIGHLIGHTING" />
@@ -107,6 +98,8 @@
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/Player.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/Player.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/Round/Round.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/Round/Round.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/Round/RoundManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/Round/RoundManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RoundOver.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/SceneHandler.cs" root0="SKIP_HIGHLIGHTING" />
@@ -133,6 +126,8 @@
     <setting file="mock://D:/MGJ-2024/ProjectSettings/ShaderGraphSettings.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/ProjectSettings/TagManager.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/UserSettings/EditorUserSettings.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/UserSettings/EditorUserSettings.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/UserSettings/EditorUserSettings.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
@@ -155,7 +150,7 @@
     "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Merging main",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -268,7 +263,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710608913802</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Merge conflicts">
+      <option name="closed" value="true" />
+      <created>1710609039914</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1710609039914</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,6 +299,7 @@
     <MESSAGE value="More BlockSpawner stuff + Physics" />
     <MESSAGE value="Merge conflict" />
     <MESSAGE value="Added MaxHeightTracker to Round Scene" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added MaxHeightTracker to Round Scene" />
+    <MESSAGE value="Merge conflicts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge conflicts" />
   </component>
 </project>

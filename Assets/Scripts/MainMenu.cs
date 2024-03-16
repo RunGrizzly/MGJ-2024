@@ -4,9 +4,7 @@ using UnityEngine;
 public class MainMenu : MonoBehaviour
 {
     private bool _readyToPlay = false;
-
-
-
+    
     private void OnEnable()
     {
         Brain.ins.EventHandler.PlayerCreatedEvent.AddListener(OnPlayerCreated);

@@ -19,19 +19,8 @@ public class BlockSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (Camera.main == null)
-        {
-            Debug.LogError("MainCamera is not tagged, that's why you can't see anything");
-            return;
-        }
-
-        var main = Camera.main;
-        var position = main.transform.position;
-        var orthographicSize = main.orthographicSize;
-
-        _screenLeftBorder = position.x - orthographicSize * Screen.width / Screen.height;
-        _screenRightBorder = position.x + orthographicSize * Screen.width / Screen.height;
-
+        CalculateCameraBounds();
+        
         var meshRenderer = GetComponent<MeshRenderer>();
         var size = meshRenderer.bounds.size;
         _objectWidth = size.x;
@@ -40,6 +29,7 @@ public class BlockSpawner : MonoBehaviour
         Brain.ins.EventHandler.BlockSettledEvent.AddListener(IncrementHeight);
         
         SpawnBlock();
+        StartMovement();
     }
 
     void FixedUpdate()
@@ -53,10 +43,30 @@ public class BlockSpawner : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown("e"))
+        {
+            CalculateCameraBounds();
+        }
         if (!_actionButton.WasPressedThisFrame() || !_isHoldingBlock) return;
 
         _isHoldingBlock = false;
         Brain.ins.EventHandler.DropBlockEvent.Invoke();
+    }
+
+    private void CalculateCameraBounds()
+    {
+        if (Camera.main == null)
+        {
+            Debug.LogError("MainCamera is not tagged, that's why you can't see anything");
+            return;
+        }
+
+        var main = Camera.main;
+        var position = main.transform.position;
+        var orthographicSize = main.orthographicSize;
+
+        _screenLeftBorder = position.x - orthographicSize * Screen.width / Screen.height;
+        _screenRightBorder = position.x + orthographicSize * Screen.width / Screen.height;
     }
 
     private void BounceDirection()
@@ -69,8 +79,8 @@ public class BlockSpawner : MonoBehaviour
 
     private void IncrementHeight([CanBeNull] Block _)
     {
-        LeanTween.cancel(gameObject);
-        LeanTween.moveY(gameObject, transform.position.y + 1f, 0.2f).setOnComplete(StartMovement);
+        //LeanTween.cancel(gameObject);
+        //LeanTween.moveY(gameObject, transform.position.y + 1f, 0.2f).setOnComplete(StartMovement);
         
         SpawnBlock();
     }
@@ -87,7 +97,6 @@ public class BlockSpawner : MonoBehaviour
             t);
         _isHoldingBlock = true;
 
-        StartMovement();
     }
 
     private void StartMovement()

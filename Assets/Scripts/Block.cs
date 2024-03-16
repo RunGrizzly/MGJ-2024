@@ -26,7 +26,7 @@ public class Block : MonoBehaviour
         Brain.ins.EventHandler.DropBlockEvent.AddListener(Drop);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         CheckIfSettled();
     }
@@ -41,13 +41,14 @@ public class Block : MonoBehaviour
     {
         if (!_settling) return;
 
-        _settleTimer -= Time.deltaTime;
+        _settleTimer -= Time.fixedDeltaTime;
 
         if (_settleTimer > 0) return;
 
         _settling = false;
         _settled = true;
         Brain.ins.EventHandler.BlockSettledEvent.Invoke(this);
+        Brain.ins.EventHandler.DropBlockEvent.RemoveListener(Drop);
     }
 
     private void OnCollisionEnter(Collision other)
@@ -68,8 +69,30 @@ public class Block : MonoBehaviour
         _settleTimer = timeToSettle;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == 8)
+        {
+            if (!_rigidBody.isKinematic)
+            {
+                Brain.ins.RoundManager.EndRound(false);
+                other.enabled = false;
+            }
+        }
+    }
+
+    public void FreezeBlock()
+    {
+        _rigidBody.isKinematic = true;
+    }
+    
     public Vector3 GetHighestPoint()
     {
-       return _rigidBody.ClosestPointOnBounds(new Vector3(0, Single.PositiveInfinity, 0));
+        return _rigidBody.ClosestPointOnBounds(new Vector3(0, 100f, 0));
+    }
+
+    public void Destroy()
+    {
+        Destroy(gameObject);
     }
 }

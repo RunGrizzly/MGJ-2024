@@ -3,14 +3,9 @@ using UnityEngine;
 
 public class RoundEnder: MonoBehaviour
 {
-    private EventHandler _eventHandler;
-    private RoundManager _roundManager;
     private void Start()
     {
-        _eventHandler = Brain.ins.EventHandler;
-        _roundManager = Brain.ins.RoundManager;
-
-        _eventHandler.BlockSettledEvent.AddListener(CheckRoundOver);
+        Brain.ins.EventHandler.BlockSettledEvent.AddListener(CheckRoundOver);
     }
 
     private void CheckRoundOver(Block _)
@@ -24,7 +19,7 @@ public class RoundEnder: MonoBehaviour
 
         if (colliders.Length <= 0) return;
         
-        if (colliders[0].gameObject.layer != 7) return;
-        _roundManager.EndRound(true);
+        if (colliders[0].gameObject.layer != 6) return;
+        Brain.ins.RoundManager.EndRound(true);
     }
 }

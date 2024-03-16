@@ -1,29 +1,53 @@
-﻿using UnityEngine;
+﻿using System;
+using Cinemachine;
+using UnityEngine;
 
-public class GameController : MonoBehaviour
+namespace DefaultNamespace
 {
-    [SerializeField] private BlockSpawner _blockSpawner;
-    [SerializeField] private MaxHeightTracker _maxHeightTracker;
-
-    private void OnEnable()
+    public class GameController : MonoBehaviour
     {
-        Brain.ins.EventHandler.StartRoundEvent.AddListener(OnStartRound);
-        Brain.ins.EventHandler.EndRoundEvent.AddListener(OnEndRound);
-    }
+        [SerializeField] private GameObject _blockSpawnerPrefab;
+        private GameObject _blockSpawner;
 
-    private void OnStartRound(Round round)
-    {
-        _blockSpawner.gameObject.SetActive(true);
-    }
+        [SerializeField] private GameObject _floorPrefab, _targetPrefab;
+        private GameObject _floor, _target;
 
-    private void OnEndRound(Round round)
-    {
-        _blockSpawner.gameObject.SetActive(false);
-    }
+        [SerializeField] private CinemachineTargetGroup _targetGroup;
+        
+        private void OnEnable()
+        {
+            Brain.ins.EventHandler.StartRoundEvent.AddListener(OnStartRound);
+            Brain.ins.EventHandler.EndRoundEvent.AddListener(OnEndRound);
+        }
 
-    private void OnDisable()
-    {
-        Brain.ins.EventHandler.StartRoundEvent.RemoveListener(OnStartRound);
-        Brain.ins.EventHandler.EndRoundEvent.RemoveListener(OnEndRound);
+        private void Start()
+        {
+            _floor = Instantiate(_floorPrefab, new Vector3(0f, 0f, 0f), Quaternion.identity);
+            _target = Instantiate(_targetPrefab, new Vector3(0f, 0f, 0f), Quaternion.identity);
+            
+            _targetGroup.AddMember(_floor.transform, 1f, 0);
+            _targetGroup.AddMember(_target.transform.GetChild(0).transform, 1f, 0);
+        }
+
+        private void OnStartRound(Round round)
+        {
+            _floor.transform.position = new Vector3(_floor.transform.position.x, round.StartHeight - 1f, _floor.transform.position.z);
+            _floor.GetComponent<Collider>().enabled = true;
+            
+            _target.transform.position = new Vector3(_target.transform.position.x, round.StartHeight + round.Height, _target.transform.position.z);
+            
+            _blockSpawner = Instantiate(_blockSpawnerPrefab, new Vector3(0f, _target.transform.GetChild(0).transform.position.y, 0f), Quaternion.identity);
+        }
+
+        private void OnEndRound(Round round)
+        {
+            Destroy(_blockSpawner);
+        }
+
+        private void OnDisable()
+        {
+            Brain.ins.EventHandler.StartRoundEvent.RemoveListener(OnStartRound);
+            Brain.ins.EventHandler.EndRoundEvent.RemoveListener(OnEndRound);
+        }
     }
 }
