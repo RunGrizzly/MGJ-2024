@@ -105,8 +105,6 @@ public class MaxHeightTracker : MonoBehaviour
         {
             _currentHighestPoint = highestPoint;
             _player = block.Owner;
-
-            Brain.ins.EventHandler.MedalEarnedEvent.Invoke(_player, MedalType.MostBlocks);
         }
     }
 }
