@@ -565,7 +565,7 @@ GameObject:
   - component: {fileID: 1382542441}
   - component: {fileID: 1382542440}
   - component: {fileID: 1382542439}
-  m_Layer: 0
+  m_Layer: 30
   m_Name: GameSceneSky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -653,7 +653,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 11.722, y: 11.722, z: 11.722}
+  m_LocalScale: {x: 250, y: 250, z: 250}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -993,8 +993,8 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1877138602}
-  - {fileID: 1382542442}
   - {fileID: 416595643}
+  - {fileID: 1382542442}
   - {fileID: 1557418811}
   - {fileID: 1655649394}
   - {fileID: 1106669100}
