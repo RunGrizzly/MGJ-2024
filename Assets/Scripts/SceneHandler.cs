@@ -9,7 +9,6 @@ public enum Scene
     MainMenu,
     Leaderboard,
     GameScene,
-    Cameras,
     Round,
     RoundOver,
 }
@@ -23,7 +22,7 @@ public class SceneHandler : MonoBehaviour
             Display.displays[i].Activate();
         }
 
-        LoadScenes(new List<Scene> { Scene.MainMenu, Scene.Cameras, Scene.GameScene,  Scene.Leaderboard , Scene.Round});
+        LoadScenes(new List<Scene> { Scene.MainMenu, Scene.Leaderboard , Scene.Round, Scene.GameScene,});
     }
 
     public void LoadScenes(List<string> sceneNames)
