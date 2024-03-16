@@ -8,23 +8,9 @@ public class RoundManager : MonoBehaviour
     public List<Round> CompletedRounds => AllRounds.Where(round => round.State == RoundState.Pass).ToList();
     public Round CurrentRound { get; set; } = null;
 
-
-    public void CreateRound()
-    {
-        CurrentRound = new Round();
-        AllRounds.Add(CurrentRound);
-        Brain.ins.EventHandler.RoundCreatedEvent.Invoke(CurrentRound);
-    }
-
-    public void StartRound()
-    {
-        CurrentRound.State = RoundState.InProgress;
-        Brain.ins.EventHandler.StartRoundEvent.Invoke(CurrentRound);
-    }
-    private List<Round> PreviousRounds = new List<Round>();
     private void Start()
     {
-        Brain.ins.EventHandler.StartRoundEvent.AddListener(() =>
+        Brain.ins.EventHandler.StartRoundEvent.AddListener((_) =>
         {
             CurrentRound = new Round();
         });
@@ -36,14 +22,20 @@ public class RoundManager : MonoBehaviour
 
         Brain.ins.EventHandler.EndRoundEvent.AddListener(_ =>
         {
-            PreviousRounds.Add(CurrentRound);
+            AllRounds.Add(CurrentRound);
         });
     }
-}
-
-    public void EndRound(bool didPass)
+    
+    public void CreateRound()
     {
-        CurrentRound.State = didPass ? RoundState.Pass : RoundState.Fail;
-        Brain.ins.EventHandler.EndRoundEvent.Invoke(CurrentRound);
+        CurrentRound = new Round();
+        AllRounds.Add(CurrentRound);
+        Brain.ins.EventHandler.RoundCreatedEvent.Invoke(CurrentRound);
+    }
+
+    public void StartRound()
+    {
+        CurrentRound.State = RoundState.InProgress;
+        Brain.ins.EventHandler.StartRoundEvent.Invoke(CurrentRound);
     }
 }
