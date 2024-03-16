@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9cd7253ad797cd4d9e15052871c9366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToSettle: 3
+  timeToSettle: 1
 --- !u!54 &8073128663913209329
 Rigidbody:
   m_ObjectHideFlags: 0
