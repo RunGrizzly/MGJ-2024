@@ -5,6 +5,6 @@ public class Player
     public Player(string name)
     {
         Name = name;
-        Brain.ins.EventHandler._playerCreatedEvent.Invoke(this);
+        Brain.ins.EventHandler.PlayerCreatedEvent.Invoke(this);
     }
 }

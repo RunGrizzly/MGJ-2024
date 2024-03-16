@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 
     private void OnEnable()
     {
-        Brain.ins.EventHandler._playerCreatedEvent.AddListener(OnPlayerCreated);
+        Brain.ins.EventHandler.PlayerCreatedEvent.AddListener(OnPlayerCreated);
         Brain.ins.RoundManager.CurrentRound = new Round();
         _readyToPlay = false;
     }
@@ -35,6 +35,6 @@ public class MainMenu : MonoBehaviour
 
     private void OnDisable()
     {
-        Brain.ins.EventHandler._playerCreatedEvent.RemoveListener(OnPlayerCreated);
+        Brain.ins.EventHandler.PlayerCreatedEvent.RemoveListener(OnPlayerCreated);
     }
 }
