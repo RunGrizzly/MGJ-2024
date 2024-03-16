@@ -40,7 +40,7 @@ public class Block : MonoBehaviour
             if (collisionInfo.gameObject.layer == 6)
             {
                 _isGrounded = true;
-                EventHandler.BlockSettled.Invoke(gameObject);
+                Brain.ins.EventHandler.BlockSettledEvent.Invoke(gameObject);
             }
         }
     }
