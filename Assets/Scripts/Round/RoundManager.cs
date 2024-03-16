@@ -7,24 +7,6 @@ public class RoundManager : MonoBehaviour
     public List<Round> AllRounds = new();
     public List<Round> CompletedRounds => AllRounds.Where(round => round.State == RoundState.Pass).ToList();
     public Round CurrentRound { get; set; } = null;
-
-    private void Start()
-    {
-        Brain.ins.EventHandler.StartRoundEvent.AddListener((_) =>
-        {
-            CurrentRound = new Round();
-        });
-        
-        Brain.ins.EventHandler.BlockSettledEvent.AddListener(block =>
-        {
-            CurrentRound.Blocks.Add(block);
-        });
-
-        Brain.ins.EventHandler.EndRoundEvent.AddListener(_ =>
-        {
-            AllRounds.Add(CurrentRound);
-        });
-    }
     
     public void CreateRound()
     {
@@ -37,5 +19,13 @@ public class RoundManager : MonoBehaviour
     {
         CurrentRound.State = RoundState.InProgress;
         Brain.ins.EventHandler.StartRoundEvent.Invoke(CurrentRound);
+    }
+
+    public void EndRound(bool hasPassed)
+    {
+        CurrentRound.State = hasPassed ? RoundState.Pass : RoundState.Fail;
+        AllRounds.Add(CurrentRound);
+
+        Brain.ins.EventHandler.EndRoundEvent.Invoke(CurrentRound);
     }
 }
