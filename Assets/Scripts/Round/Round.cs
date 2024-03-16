@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using UnityEngine;
 
 public enum RoundState
 {
@@ -17,10 +16,12 @@ public class Round
     public float Height = 3;
     public float StartHeight = 0;
     public readonly int Ante;
+    public readonly int Session;
 
-    public Round(int ante)
+    public Round(int ante, int session)
     {
         Ante = ante;
+        Session = session;
     }
     
     public void DestroyBlocks()

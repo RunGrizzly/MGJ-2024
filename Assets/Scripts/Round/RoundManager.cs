@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -8,6 +7,7 @@ public class RoundManager : MonoBehaviour
     public List<Round> AllRounds = new();
     public List<Round> CompletedRounds => AllRounds.Where(round => round.State == RoundState.Pass).ToList();
     public Round CurrentRound { get; set; } = null;
+    private int _sessionCount = 0;
 
     private void Start()
     {
@@ -20,7 +20,7 @@ public class RoundManager : MonoBehaviour
     public void CreateRound()
     {
         var point = CompletedRounds.Count > 0 ? CompletedRounds.Last().Blocks.Last().GetHighestPoint().y : 0;
-        var round = new Round(1)
+        var round = new Round(1, _sessionCount)
         {
             StartHeight = point
         };
@@ -40,7 +40,7 @@ public class RoundManager : MonoBehaviour
     {
         var point = CurrentRound.Blocks.Last().GetHighestPoint().y;
         var ante = CurrentRound.Ante + 1;
-        var round = new Round(ante)
+        var round = new Round(ante, _sessionCount)
         {
             StartHeight = point
         };
@@ -67,5 +67,10 @@ public class RoundManager : MonoBehaviour
 
         Brain.ins.SceneHandler.LoadScenes(new List<Scene>{ Scene.RoundOver });
         Brain.ins.EventHandler.EndRoundEvent.Invoke(CurrentRound);
+    }
+
+    public void SessionOver()
+    {
+        _sessionCount += 1;
     }
 }
