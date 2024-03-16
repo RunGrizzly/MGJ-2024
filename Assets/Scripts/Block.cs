@@ -31,7 +31,7 @@ public class Block : MonoBehaviour
         CheckIfSettled();
     }
 
-    private void Drop()
+    private void Drop(Block _)
     {
         transform.parent = null;
         _rigidBody.isKinematic = false;

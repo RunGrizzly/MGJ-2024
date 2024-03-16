@@ -36,7 +36,8 @@ public class RoundOver : MonoBehaviour
     {
         if (_state == State.Pass && obj.interaction is MultiTapInteraction)
         {
-            Debug.Log("Double this bitch up!!!!");
+            Brain.ins.RoundManager.UpTheAnte();
+            Brain.ins.SceneHandler.UnloadScenes(new List<Scene>{Scene.RoundOver});
         }
         else if (obj.interaction is TapInteraction)
         {
