@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Interactions;
@@ -12,17 +14,22 @@ public class RoundOver : MonoBehaviour
 
     [SerializeField] private GameObject _doubleUpButton;
     private State _state;
-
-    private void Start()
+    
+    private void OnEnable()
     {
-        if (Brain.ins.RoundManager.CurrentRound.State == RoundState.Pass)
         _state = Brain.ins.RoundManager.CurrentRound.State == RoundState.Pass ? State.Pass : State.Fail;
+        
         if (_state == State.Fail)
         {
             _doubleUpButton.SetActive(false);
         }
 
         Brain.ins.Controls.Player.Everything.performed += OnEverything;
+    }
+
+    private void OnDisable()
+    {
+        Brain.ins.Controls.Player.Everything.performed -= OnEverything;
     }
 
     private void OnEverything(InputAction.CallbackContext obj)
@@ -33,6 +40,8 @@ public class RoundOver : MonoBehaviour
         }
         else if (obj.interaction is TapInteraction)
         {
+            Brain.ins.SceneHandler.UnloadScenes(new List<Scene>{Scene.RoundOver});
+            Brain.ins.SceneHandler.LoadScenes(new List<Scene>{Scene.MainMenu});
             Debug.Log("Go back to menu, bitch!");
         }
     }

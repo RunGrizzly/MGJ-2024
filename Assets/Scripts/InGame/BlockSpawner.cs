@@ -29,6 +29,7 @@ public class BlockSpawner : MonoBehaviour
         Brain.ins.EventHandler.BlockSettledEvent.AddListener(IncrementHeight);
         
         SpawnBlock();
+        StartMovement();
     }
 
     void FixedUpdate()
@@ -78,8 +79,8 @@ public class BlockSpawner : MonoBehaviour
 
     private void IncrementHeight([CanBeNull] Block _)
     {
-        LeanTween.cancel(gameObject);
-        LeanTween.moveY(gameObject, transform.position.y + 1f, 0.2f).setOnComplete(StartMovement);
+        //LeanTween.cancel(gameObject);
+        //LeanTween.moveY(gameObject, transform.position.y + 1f, 0.2f).setOnComplete(StartMovement);
         
         SpawnBlock();
     }
@@ -96,7 +97,6 @@ public class BlockSpawner : MonoBehaviour
             t);
         _isHoldingBlock = true;
 
-        StartMovement();
     }
 
     private void StartMovement()
