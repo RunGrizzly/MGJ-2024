@@ -1,11 +1,21 @@
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Leaderboard : MonoBehaviour
 {
     private void OnEnable()
     {
         Brain.ins.EventHandler.EndRoundEvent.AddListener(SyncLeaderboard);
+
+
+        Brain.ins.EventHandler.MedalEarnedEvent.AddListener(DisplayMedal);
+
     }
+    private void DisplayMedal(Player player, MedalType medalType)
+    {
+        Debug.LogFormat("{0} achieved {1}", player.Name, medalType.ToString());
+    }
+
 
     private void SyncLeaderboard(Round context)
     {

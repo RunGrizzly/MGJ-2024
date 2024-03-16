@@ -15,7 +15,7 @@ public class AdminControls : MonoBehaviour
 
     public void TriggerEffortMedal()
     {
-        Brain.ins.EventHandler.EffortMedal.Invoke(2);
+        Brain.ins.EventHandler.MedalEarnedEvent.Invoke(new Player("A fake name"), MedalType.WobbliestPlayer);
     }
 
 }

@@ -10,10 +10,10 @@ public class EventHandler : MonoBehaviour
     public BlockDiedEvent BlockDiedEvent;
 
     //Medals
-    public WobbliestMedal WobbliestMedal;
-    public EffortMedal EffortMedal;
-    public MostBlocksMedal MostBlocksMedal;
-    public WasterMedal WasterMedal;
+    public MedalEarnedEvent MedalEarnedEvent;
+    // public EffortMedal EffortMedal;
+    // public MostBlocksMedal MostBlocksMedal;
+    // public WasterMedal WasterMedal;
 
     private void Awake()
     {
@@ -25,9 +25,9 @@ public class EventHandler : MonoBehaviour
         BlockDiedEvent ??= new();
 
         //Medals
-        WobbliestMedal ??= new();
-        EffortMedal ??= new();
-        MostBlocksMedal ??= new();
-        WasterMedal ??= new();
+        MedalEarnedEvent ??= new();
+        // EffortMedal ??= new();
+        // MostBlocksMedal ??= new();
+        // WasterMedal ??= new();
     }
 }
