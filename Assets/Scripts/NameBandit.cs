@@ -26,9 +26,6 @@ namespace DefaultNamespace
                 Brain.ins.EventHandler.PlaySFXEvent.Invoke(sectionBlips[+_chosenSectionCount], 0);
 
                 _chosenSectionCount += 1;
-
-
-
             }
 
             if (_chosenSectionCount == _sections.Count)

@@ -53,6 +53,7 @@ public class Block : MonoBehaviour
         
         if (other.gameObject.layer == 6)
         {
+            Debug.LogError($"Collision with: {other.gameObject.name}");
             _settling = true;
         }
     }

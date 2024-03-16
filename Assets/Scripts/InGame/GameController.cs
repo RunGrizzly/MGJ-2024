@@ -4,8 +4,8 @@ namespace DefaultNamespace
 {
     public class GameController : MonoBehaviour
     {
-        [SerializeField] private BlockSpawner _blockSpawner;
-
+        [SerializeField] private GameObject _blockSpawnerPrefab;
+        private GameObject _blockSpawner;
         private void OnEnable()
         {
             Brain.ins.EventHandler.StartRoundEvent.AddListener(OnStartRound);
@@ -13,18 +13,18 @@ namespace DefaultNamespace
         }
 
         private void Start()
-        {
-            _blockSpawner.gameObject.SetActive(false);
+        { 
+            _blockSpawner = Instantiate(_blockSpawnerPrefab, new Vector3(0f, 6f, 0f), Quaternion.identity);
         }
 
         private void OnStartRound(Round round)
         {
-            _blockSpawner.gameObject.SetActive(true);
+            _blockSpawner.SetActive(true);
         }
 
         private void OnEndRound(Round round)
         {
-            _blockSpawner.gameObject.SetActive(false);
+            _blockSpawner.SetActive(false);
         }
 
         private void OnDisable()
