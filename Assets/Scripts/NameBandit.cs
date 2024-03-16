@@ -7,20 +7,20 @@ namespace DefaultNamespace
 {
     public class NameBandit : MonoBehaviour
     {
-        private List<NameBanditSection> _sections;
+        [SerializeField] private List<NameBanditSection> _sections;
         private int _chosenSectionCount = 0;
         private List<string> _chosenWords = new();
         private bool nameChosen = false;
-        
-        private void Start()
-        {
-            _sections = GetComponentsInChildren<NameBanditSection>().ToList();
-        }
+
+        // private void Start()
+        // {
+        //     _sections = GetComponentsInChildren<NameBanditSection>().ToList();
+        // }
 
         private void Update()
         {
-            if(nameChosen) return;
-            
+            if (nameChosen) return;
+
             if (Brain.ins.Controls.Player.Everything.WasPressedThisFrame())
             {
                 var word = _sections[_chosenSectionCount].Stop();

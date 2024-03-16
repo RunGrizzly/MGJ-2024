@@ -12,7 +12,7 @@ public class SceneHandler : MonoBehaviour
             Display.displays[i].Activate();
         }
 
-        LoadScenes(new List<string>() { "MainMenu" });
+        LoadScenes(new List<string>() { "Cameras" });
         // /SceneManager.LoadSceneAsync("MainMenu", LoadSceneMode.Additive);
         // SceneManager.LoadSceneAsync("Leaderboard", LoadSceneMode.Additive);
         // SceneManager.LoadSceneAsync("GameScene", LoadSceneMode.Additive);

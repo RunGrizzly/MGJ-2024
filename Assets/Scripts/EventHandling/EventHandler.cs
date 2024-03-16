@@ -7,7 +7,7 @@ public class EventHandler : MonoBehaviour
     public EndRoundEvent EndRoundEvent;
     public PlayerCreatedEvent PlayerCreatedEvent;
     public DropBlockEvent DropBlockEvent;
-    public BlockDiedEvent BlockDiedEvent;
+    public BlockSettledEvent BlockSettledEvent;
 
     //Medals
     public WobbliestMedal WobbliestMedal;
@@ -22,7 +22,7 @@ public class EventHandler : MonoBehaviour
         EndRoundEvent ??= new();
         PlayerCreatedEvent ??= new();
         DropBlockEvent ??= new();
-        BlockDiedEvent ??= new();
+        BlockSettledEvent ??= new();
 
         //Medals
         WobbliestMedal ??= new();

@@ -319,10 +319,22 @@ MonoBehaviour:
     loadInEditor: 0
     loadMethod: 3
   - scene:
+      editorAssetGUID: 3a620415bdc2f974683711c4e647ed02
+      name: Leaderboard
+      _path: Assets/Scenes/Leaderboard.unity
+    loadInEditor: 0
+    loadMethod: 3
+  - scene:
       editorAssetGUID: 14c0773d62de1d944ae9b69e48c3c591
       name: Round
       _path: Assets/Scenes/Round.unity
     loadInEditor: 0
+    loadMethod: 3
+  - scene:
+      editorAssetGUID: eeb1679798e3cfe4580b1d0608c7ab1b
+      name: Cameras
+      _path: Assets/Scenes/Cameras.unity
+    loadInEditor: 1
     loadMethod: 3
   _isMainScene: 0
   _version: 1
