@@ -12,17 +12,11 @@ public class SceneHandler : MonoBehaviour
             Display.displays[i].Activate();
         }
 
-        LoadScenes(new List<string>() { "Cameras" });
-        // /SceneManager.LoadSceneAsync("MainMenu", LoadSceneMode.Additive);
+        //LoadScenes(new List<string>() { "Cameras" });
+        SceneManager.LoadSceneAsync("MainMenu", LoadSceneMode.Additive);
         // SceneManager.LoadSceneAsync("Leaderboard", LoadSceneMode.Additive);
         // SceneManager.LoadSceneAsync("GameScene", LoadSceneMode.Additive);
-
-        Brain.ins.EventHandler.EndRoundEvent.AddListener((context) =>
-        {
-            Debug.LogFormat("The round ended with the {0} condition", context.ToString());
-        });
     }
-
 
     public void LoadScenes(List<string> sceneNames)
     {

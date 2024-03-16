@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using JetBrains.Annotations;
-using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,7 +9,7 @@ public class BlockSpawner : MonoBehaviour
     private float _objectWidth;
     private bool _isMovingRight = true;
     private InputAction _actionButton;
-    
+
     [SerializeField]
     private float speed = 0f;
 
@@ -38,11 +37,11 @@ public class BlockSpawner : MonoBehaviour
 
         _actionButton = Brain.ins.Controls.FindAction("Everything");
         Brain.ins.EventHandler.BlockSettledEvent.AddListener(SpawnBlock);
-        
+
         SpawnBlock(null);
         StartMovement();
     }
-    
+
     void FixedUpdate()
     {
         var positionX = transform.position.x;
@@ -57,10 +56,10 @@ public class BlockSpawner : MonoBehaviour
         if (_actionButton.WasPressedThisFrame())
         {
             Brain.ins.EventHandler.DropBlockEvent.Invoke();
-           LeanTween.cancel(gameObject);
-           
-           var pos = transform.position;
-           LeanTween.move(gameObject, new Vector3 { x = 0, y = pos.y + 1, z = pos.z}, 0.2f);
+            LeanTween.cancel(gameObject);
+
+            var pos = transform.position;
+            LeanTween.move(gameObject, new Vector3 { x = 0, y = pos.y + 1, z = pos.z }, 0.2f);
         }
     }
 
@@ -71,7 +70,7 @@ public class BlockSpawner : MonoBehaviour
 
         LeanTween.moveX(gameObject, _isMovingRight ? _screenRightBorder : _screenLeftBorder, speed * 2);
     }
-    
+
     private void SpawnBlock([CanBeNull] GameObject _)
     {
         var block = blocks[Random.Range(0, blocks.Count - 1)];
@@ -90,5 +89,5 @@ public class BlockSpawner : MonoBehaviour
     {
         LeanTween.moveX(gameObject, _isMovingRight ? _screenRightBorder : _screenLeftBorder, speed);
     }
-    
+
 }

@@ -17,5 +17,4 @@ public class AdminControls : MonoBehaviour
     {
         Brain.ins.EventHandler.MedalEarnedEvent.Invoke(new Player("A fake name"), MedalType.WobbliestPlayer);
     }
-
 }
