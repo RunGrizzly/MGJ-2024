@@ -3,6 +3,7 @@ using UnityEngine;
 public class EventHandler : MonoBehaviour
 {
     //Game Events
+    public RoundCreatedEvent RoundCreatedEvent;
     public StartRoundEvent StartRoundEvent;
     public EndRoundEvent EndRoundEvent;
     public PlayerCreatedEvent PlayerCreatedEvent;
@@ -10,14 +11,15 @@ public class EventHandler : MonoBehaviour
     public BlockSettledEvent BlockSettledEvent;
 
     //Medals
-    public WobbliestMedal WobbliestMedal;
-    public EffortMedal EffortMedal;
-    public MostBlocksMedal MostBlocksMedal;
-    public WasterMedal WasterMedal;
+    public MedalEarnedEvent MedalEarnedEvent;
+
+    //Audio
+    public PlaySFXEvent PlaySFXEvent;
 
     private void Awake()
     {
         //Game Events
+        RoundCreatedEvent ??= new();
         StartRoundEvent ??= new();
         EndRoundEvent ??= new();
         PlayerCreatedEvent ??= new();
@@ -25,9 +27,9 @@ public class EventHandler : MonoBehaviour
         BlockSettledEvent ??= new();
 
         //Medals
-        WobbliestMedal ??= new();
-        EffortMedal ??= new();
-        MostBlocksMedal ??= new();
-        WasterMedal ??= new();
+        MedalEarnedEvent ??= new();
+
+        //Audio
+        PlaySFXEvent ??= new();
     }
 }

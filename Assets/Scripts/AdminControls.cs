@@ -9,13 +9,12 @@ public class AdminControls : MonoBehaviour
     {
         Brain.ins.EventHandler.EndRoundEvent.Invoke(Brain.ins.RoundManager.CurrentRound);
 
-        Brain.ins.SceneHandler.UnloadScenes(new List<string>() { "Round", "Leaderboard", "GameScene" });
+        Brain.ins.SceneHandler.UnloadScenes(new List<string>() { "Round" });
         Brain.ins.SceneHandler.LoadScenes(new List<string>() { "MainMenu" });
     }
 
     public void TriggerEffortMedal()
     {
-        Brain.ins.EventHandler.EffortMedal.Invoke(2);
+        Brain.ins.EventHandler.MedalEarnedEvent.Invoke(new Player("A fake name"), MedalType.WobbliestPlayer);
     }
-
 }

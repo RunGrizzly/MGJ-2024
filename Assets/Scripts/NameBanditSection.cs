@@ -29,7 +29,7 @@ public class NameBanditSection : MonoBehaviour
 
         if (_summit > _delay)
         {
-            _index = (_index + 1) % _wordList.Adjectives.Count;
+            _index = (_index + 1) % _wordList.GetWordCount(_wordType);
             UpdateText();
             _summit = 0;
         }

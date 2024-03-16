@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
-using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,7 +10,7 @@ public class BlockSpawner : MonoBehaviour
     private float _objectWidth;
     private bool _isMovingRight, _isHoldingBlock = true;
     private InputAction _actionButton;
-    
+
     [SerializeField]
     private float speed = 0f;
 
@@ -42,7 +41,7 @@ public class BlockSpawner : MonoBehaviour
         
         SpawnBlock();
     }
-    
+
     void FixedUpdate()
     {
         var positionX = transform.position.x;

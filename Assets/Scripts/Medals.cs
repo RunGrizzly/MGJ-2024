@@ -1,9 +1,11 @@
 using UnityEngine.Events;
 
-public class Medal : UnityEvent<int> { };
+public enum MedalType
+{
+    WobbliestPlayer,
+    Effort,
+    MostBlocks,
+    Waster
+}
 
-public class WobbliestMedal : Medal { };
-public class EffortMedal : Medal { };
-public class MostBlocksMedal : Medal { };
-public class WasterMedal : Medal { };
-
+public class MedalEarnedEvent : UnityEvent<Player, MedalType> { };
