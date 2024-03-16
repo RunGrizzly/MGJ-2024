@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -446,7 +446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7208d174cb9201045a65c72283afa2f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _doubleUpButton: {fileID: 0}
+  _doubleUpButton: {fileID: 119634244}
 --- !u!4 &646752340
 Transform:
   m_ObjectHideFlags: 0
@@ -793,38 +793,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 085c2289556c08443b40563cfe8016e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneSetupMode: 0
-  _sceneSetup:
-  - scene:
-      editorAssetGUID: 78f6d424f23d93e469f44f295b289f01
-      name: Managers
-      _path: Assets/Scenes/Managers.unity
-    loadInEditor: 0
-    loadMethod: 1
-  - scene:
-      editorAssetGUID: 85dfa7cb83288224490c88aa2ff76f42
-      name: MainMenu
-      _path: Assets/Scenes/MainMenu.unity
-    loadInEditor: 0
-    loadMethod: 1
-  - scene:
-      editorAssetGUID: c5df5f38578eb0e47a8fe41fb605fdd8
-      name: GameScene
-      _path: Assets/Scenes/GameScene.unity
-    loadInEditor: 0
-    loadMethod: 1
-  - scene:
-      editorAssetGUID: 3a620415bdc2f974683711c4e647ed02
-      name: Leaderboard
-      _path: Assets/Scenes/Leaderboard.unity
-    loadInEditor: 0
-    loadMethod: 1
-  - scene:
-      editorAssetGUID: 14c0773d62de1d944ae9b69e48c3c591
-      name: Round
-      _path: Assets/Scenes/Round.unity
-    loadInEditor: 0
-    loadMethod: 1
+  _sceneSetupMode: 2
+  _sceneSetup: []
   _isMainScene: 0
   _version: 1
   _thisScenePath: Assets/Scenes/RoundOver.unity
