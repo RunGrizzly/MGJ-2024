@@ -13,7 +13,7 @@ public class Round
     public Player Player;
     public RoundState State = RoundState.New;
     public List<Block> Blocks = new();
-    public float Height = 3;
+    public float Height = 10;
     public float StartHeight = 0;
     public readonly int Ante;
     public readonly int Session;
