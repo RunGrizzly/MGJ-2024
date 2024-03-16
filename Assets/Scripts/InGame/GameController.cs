@@ -11,22 +11,14 @@ public class GameController : MonoBehaviour
         Brain.ins.EventHandler.EndRoundEvent.AddListener(OnEndRound);
     }
 
-    private void Start()
-    {
-        // _blockSpawner.gameObject.SetActive(false);
-        // _maxHeightTracker.gameObject.SetActive(false);
-    }
-
     private void OnStartRound(Round round)
     {
         _blockSpawner.gameObject.SetActive(true);
-        _maxHeightTracker.gameObject.SetActive(true);
     }
 
     private void OnEndRound(Round round)
     {
         _blockSpawner.gameObject.SetActive(false);
-        _maxHeightTracker.gameObject.SetActive(false);
     }
 
     private void OnDisable()

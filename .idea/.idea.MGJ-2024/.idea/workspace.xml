@@ -4,34 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1aa1de97-9200-4616-b30c-235fc6fd9684" name="Changes" comment="More BlockSpawner stuff + Physics">
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/cartoon_anime_whoosh_rush_power_laser_002_71552.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/cartoon_anime_whoosh_rush_power_laser_002_71552.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/zapsplat_cartoon_anime_laser_zap_92485.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/zapsplat_cartoon_anime_laser_zap_92485.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/MedalWidget.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/MedalWidget.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MedalWidget.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MedalWidget.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/GameSceneSky_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/GameSceneSky_mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/LeaderboardSky_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/LeaderboardSky_mat.mat" afterDir="false" />
+    <list default="true" id="1aa1de97-9200-4616-b30c-235fc6fd9684" name="Changes" comment="Added MaxHeightTracker to Round Scene">
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Lava.shadergraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Lava.shadergraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Lava_mat.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Lava_mat.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Skybox.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Skybox.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Melt 6 - 512x512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Melt 6 - 512x512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MGJ-2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MGJ-2024/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Leaderboard.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Leaderboard.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Managers.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Managers.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Round.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Round.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AdminControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AdminControls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventHandling/Events.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventHandling/Events.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Leaderboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Leaderboard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Medals.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Medals.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NameBandit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NameBandit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Round/Round.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Round/Round.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Round/RoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Round/RoundManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RoundEnder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RoundEnder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Skybox.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/Skybox.shadergraph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGame/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGame/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,6 +43,8 @@
     <setting file="mock://D:/MGJ-2024/Assets/AdminControls.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Leaderboard.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/MainMenu.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Prefabs/UI/AboveScreenMaxHeightLabel.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Prefabs/UI/OnScreenMaxHeightLabel.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/RoundOver.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/RoundOver.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/RoundOver.cs" root0="SKIP_HIGHLIGHTING" />
@@ -63,11 +55,18 @@
     <setting file="mock://D:/MGJ-2024/Assets/Scenes/GameScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scenes/GameScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scenes/Leaderboard.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scenes/Leaderboard.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scenes/Leaderboard.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scenes/Leaderboard.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scenes/Leaderboard.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scenes/Managers.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scenes/Managers.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scenes/Managers.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scenes/Managers.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scenes/Round.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ScreenLabel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/ScriptableObjects/WordList.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/AdminControls.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AdminControls.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/AdminControls.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/Block.cs" root0="SKIP_HIGHLIGHTING" />
@@ -96,6 +95,8 @@
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/GameController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/GameController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/GameController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/GameController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/MaxHeightTracker.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/NameBandit.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/NameBandit.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/NameBandit.cs" root0="SKIP_HIGHLIGHTING" />
@@ -109,10 +110,10 @@
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/Round/RoundManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RoundOver.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/SceneHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/MGJ-2024/Assets/Scripts/SceneHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/MGJ-2024/Assets/Scripts/SceneHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/MGJ-2024/Assets/Scripts/SceneHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/SceneHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/SceneHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/SceneHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/SceneHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/SceneHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/SceneHandler.cs" root0="SKIP_HIGHLIGHTING" />
@@ -131,6 +132,7 @@
     <setting file="mock://D:/MGJ-2024/ProjectSettings/ShaderGraphSettings.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/ProjectSettings/ShaderGraphSettings.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/ProjectSettings/TagManager.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/UserSettings/EditorUserSettings.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
@@ -148,28 +150,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Merging main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Merging main",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\Kyle Jamming 2\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\Kyle Jamming 2\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\Kyle Jamming 2\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\Kyle Jamming 2\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Kyle Jamming 2\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\Kyle Jamming 2\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2023.1.18f1\Editor\Unity.exe" />
@@ -250,7 +252,23 @@
       <option name="project" value="LOCAL" />
       <updated>1710551127268</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Merge conflict">
+      <option name="closed" value="true" />
+      <created>1710605590259</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710605590259</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added MaxHeightTracker to Round Scene">
+      <option name="closed" value="true" />
+      <created>1710608913802</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1710608913802</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,6 +294,8 @@
     <MESSAGE value="Added name bandit basic mode" />
     <MESSAGE value="Some base gameplay WIP" />
     <MESSAGE value="More BlockSpawner stuff + Physics" />
-    <option name="LAST_COMMIT_MESSAGE" value="More BlockSpawner stuff + Physics" />
+    <MESSAGE value="Merge conflict" />
+    <MESSAGE value="Added MaxHeightTracker to Round Scene" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added MaxHeightTracker to Round Scene" />
   </component>
 </project>
