@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -8,8 +9,7 @@ public class BlockSpawner : MonoBehaviour
     private float _screenLeftBorder, _screenRightBorder = 0.0f;
     private float _objectWidth;
     private bool _isMovingRight = true;
-    private bool _isHoldingBlock = false;
-    private InputAction actionButton;
+    private InputAction _actionButton;
     
     [SerializeField]
     private float speed = 0f;
@@ -36,14 +36,13 @@ public class BlockSpawner : MonoBehaviour
         var size = meshRenderer.bounds.size;
         _objectWidth = size.x;
 
-        actionButton = Brain.ins.Controls.FindAction("Everything");
-        EventHandler.BlockDied.AddListener(SpawnBlock);
+        _actionButton = Brain.ins.Controls.FindAction("Everything");
+        EventHandler.BlockSettled.AddListener(SpawnBlock);
         
-        SpawnBlock();
+        SpawnBlock(null);
         StartMovement();
     }
-
-    // Update is called once per frame
+    
     void FixedUpdate()
     {
         var positionX = transform.position.x;
@@ -55,11 +54,13 @@ public class BlockSpawner : MonoBehaviour
 
     void Update()
     {
-        if (actionButton.WasPressedThisFrame())
+        if (_actionButton.WasPressedThisFrame())
         {
            EventHandler.DropBlock.Invoke();
            LeanTween.cancel(gameObject);
-           LeanTween.moveX(gameObject, 0f, 0.2f);
+           
+           var pos = transform.position;
+           LeanTween.move(gameObject, new Vector3 { x = 0, y = pos.y + 1, z = pos.z}, 0.2f);
         }
     }
 
@@ -71,7 +72,7 @@ public class BlockSpawner : MonoBehaviour
         LeanTween.moveX(gameObject, _isMovingRight ? _screenRightBorder : _screenLeftBorder, speed * 2);
     }
     
-    private void SpawnBlock()
+    private void SpawnBlock([CanBeNull] GameObject _)
     {
         var block = blocks[Random.Range(0, blocks.Count - 1)];
 
@@ -89,4 +90,5 @@ public class BlockSpawner : MonoBehaviour
     {
         LeanTween.moveX(gameObject, _isMovingRight ? _screenRightBorder : _screenLeftBorder, speed);
     }
+    
 }

@@ -4,17 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1aa1de97-9200-4616-b30c-235fc6fd9684" name="Changes" comment="">
+    <list default="true" id="1aa1de97-9200-4616-b30c-235fc6fd9684" name="Changes" comment="More BlockSpawner stuff + Physics">
+      <change afterPath="$PROJECT_DIR$/Assets/PhysicsMaterials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/PhysicsMaterials/BlockDefault.physicMaterial" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/PhysicsMaterials/BlockDefault.physicMaterial.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MGJ-2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MGJ-2024/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Block.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Block.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cameras.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Cameras.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Managers.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Managers.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Block.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Block.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BlockSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BlockSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Brain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Brain.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventHandling/EventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventHandling/EventHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventHandling/Events.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventHandling/Events.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Search.settings" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Search.settings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2023.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2023.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,15 +43,27 @@
     <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Prefabs.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Prefabs.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Prefabs.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Prefabs/Block.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scenes/Cameras.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scenes/Cameras.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scenes/Managers.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scripts/Block.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scripts/BlockSpawner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scripts/BlockSpawner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scripts/Brain.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scripts/Brain.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scripts/EventHandling/EventHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scripts/EventHandling/EventHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scripts/SceneHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scripts/SceneHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@3.0.25/Rider/Editor/Discovery.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/CanvasRenderer/ParentCanvasIsSane.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Button/ButtonTests.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/ProjectSettings/DynamicsManager.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/ProjectSettings/ProjectSettings.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/ProjectSettings/TagManager.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
@@ -65,6 +82,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -111,10 +129,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="7540">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="7540" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -148,7 +166,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710534457671</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Some base gameplay WIP">
+      <option name="closed" value="true" />
+      <created>1710541011940</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710541011940</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +187,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Added word lists" />
     <MESSAGE value="Added name bandit basic mode" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="Some base gameplay WIP" />
+    <MESSAGE value="More BlockSpawner stuff + Physics" />
+    <option name="LAST_COMMIT_MESSAGE" value="More BlockSpawner stuff + Physics" />
   </component>
 </project>

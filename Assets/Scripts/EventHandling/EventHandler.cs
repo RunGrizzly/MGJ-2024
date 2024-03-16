@@ -14,19 +14,19 @@ public class EventHandler : MonoBehaviour
     public class EndRoundEvent : UnityEvent<RoundEndCondition> { };
     
     public class DropBlockEvent: UnityEvent { }
-    public class BlockDiedEvent: UnityEvent {}
+    public class BlockSettledEvent: UnityEvent<GameObject> {}
 
     public StartRoundEvent _startRoundEvent = null;
     public EndRoundEvent _endRoundEvent = null;
     public static DropBlockEvent DropBlock;
-    public static BlockDiedEvent BlockDied;
+    public static BlockSettledEvent BlockSettled;
 
     private void Awake()
     {
         _startRoundEvent ??= new();
         _endRoundEvent ??= new();
         DropBlock ??= new();
-        BlockDied ??= new();
+        BlockSettled ??= new();
     }
 }
 
