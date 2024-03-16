@@ -1,0 +1,181 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36016d5c4b264b8498910ad67e25fdad, type: 3}
+  m_Name: BanditWords
+  m_EditorClassIdentifier: 
+  Verbs:
+  - Gliding
+  - Swooping
+  - Flapping
+  - Darting
+  - Hovering
+  - Circling
+  - Zooming
+  - Whirling
+  - Fluttering
+  - Skimming
+  - Dancing
+  - Swirling
+  - Racing
+  - Twirling
+  - Diving
+  - Whizzing
+  - Spinning
+  - Leaping
+  - Screeching
+  - Floating
+  - Zipping
+  - Hurdling
+  - Coasting
+  - Winging
+  - Whisking
+  - Pivoting
+  - Glancing
+  - Pirouetting
+  - Skipping
+  - Cartwheeling
+  - Balancing
+  - Wriggling
+  - Skittering
+  - Escaping
+  - Whirling
+  - Flickering
+  - Darting
+  - Bouncing
+  - Drifting
+  - Pouncing
+  - Zooming
+  - Bounding
+  - Swinging
+  - Slipping
+  - Chasing
+  - Dashing
+  - Galloping
+  - Racing
+  - Hurtling
+  Adverbs: 
+  - Gracefully
+  - Swiftly
+  - Quietly
+  - Elegantly
+  - Silently
+  - Effortlessly
+  - Gently
+  - Playfully
+  - Smoothly
+  - Seamlessly
+  - Carefully
+  - Skillfully
+  - Stealthily
+  - Nimbly
+  - Freely
+  - Glidingly
+  - Agilely
+  - Slickly
+  - Fluidly
+  - Beautifully
+  - Magically
+  - Serenely
+  - Quickly
+  - Expertly
+  - Precisely
+  - Delicately
+  - Daintily
+  - Calmly
+  - Mystically
+  - Effervescently
+  - Fantastically
+  Adjectives: 
+  - Happy
+  - Brave
+  - Funny
+  - Kind
+  - Smart
+  - Bright
+  - Shiny
+  - Sweet
+  - Gentle
+  - Silly
+  - Friendly
+  - Clever
+  - Jolly
+  - Lively
+  - Colorful
+  - Playful
+  - Polite
+  - Caring
+  - Curious
+  - Creative
+  - Cheery
+  - Helpful
+  - Joyful
+  - Honest
+  - Warm
+  - Loving
+  - Magical
+  - Peaceful
+  - Sincere
+  - Thoughtful
+  - Brave
+  - Excited
+  - Charming
+  - Fancy
+  - Lucky
+  - Sensitive
+  - Talented
+  - Eager
+  - Curly
+  - Brave
+  - Bright
+  - Merry
+  - Sparkling
+  - Wise
+  - Fancy
+  - Soft
+  - Delightful
+  - Generous
+  - Bubbly
+  - Unique
+  Animals:
+  - Wolf
+  - Snake
+  - Raven
+  - Scorpion
+  - Bat
+  - Shark
+  - Tiger
+  - Panther
+  - Lion
+  - Eagle
+  - Falcon
+  - Owl
+  - Bear
+  - Bull
+  - Rhino
+  - Crocodile
+  - Alligator
+  - Komodo Dragon
+  - Octopus
+  - Anaconda
+  - Wolverine
+  - Piranha
+  - Tarantula
+  - Komodo Dragon
+  - Hammerhead Shark
+  - Polar Bear
+  - Wolverine
+  - Tasmanian Devil
+  - Hyena
+  - Vulture
+  - Komodo Dragon
+  - Wolverine
+  - Tasmanian Devil

@@ -17,7 +17,7 @@ public class SceneHandler : MonoBehaviour
         // SceneManager.LoadSceneAsync("Leaderboard", LoadSceneMode.Additive);
         // SceneManager.LoadSceneAsync("GameScene", LoadSceneMode.Additive);
 
-        Brain.ins.EventHandler._endRoundEvent.AddListener((context) =>
+        Brain.ins.EventHandler.EndRoundEvent.AddListener((context) =>
         {
             Debug.LogFormat("The round ended with the {0} condition", context.ToString());
         });

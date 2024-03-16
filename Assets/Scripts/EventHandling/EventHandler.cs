@@ -1,33 +1,33 @@
 using UnityEngine;
-using UnityEngine.Events;
-
-//TODO Kyoooooo move this to your round fool.
-public enum RoundEndCondition { Pass, Fail };
 
 public class EventHandler : MonoBehaviour
 {
-    //A round is  each set of blocks that the player is given
-    public class StartRoundEvent : UnityEvent { };
+    //Game Events
+    public StartRoundEvent StartRoundEvent;
+    public EndRoundEvent EndRoundEvent;
+    public PlayerCreatedEvent PlayerCreatedEvent;
+    public DropBlockEvent DropBlockEvent;
+    public BlockDiedEvent BlockDiedEvent;
 
-    //Called when the game is ended and we want to pass a pass fail/condition to the leaderboard
-    //This  should pass on the round object - for now a game end condition is fine
-    public class EndRoundEvent : UnityEvent<RoundEndCondition> { };
-    
-    public class DropBlockEvent: UnityEvent { }
-    public class BlockSettledEvent: UnityEvent<GameObject> {}
-
-    public StartRoundEvent _startRoundEvent = null;
-    public EndRoundEvent _endRoundEvent = null;
-    public static DropBlockEvent DropBlock;
-    public static BlockSettledEvent BlockSettled;
+    //Medals
+    public WobbliestMedal WobbliestMedal;
+    public EffortMedal EffortMedal;
+    public MostBlocksMedal MostBlocksMedal;
+    public WasterMedal WasterMedal;
 
     private void Awake()
     {
-        _startRoundEvent ??= new();
-        _endRoundEvent ??= new();
+        //Game Events
+        StartRoundEvent ??= new();
+        EndRoundEvent ??= new();
+        PlayerCreatedEvent ??= new();
         DropBlock ??= new();
         BlockSettled ??= new();
+
+        //Medals
+        WobbliestMedal ??= new();
+        EffortMedal ??= new();
+        MostBlocksMedal ??= new();
+        WasterMedal ??= new();
     }
 }
-
-

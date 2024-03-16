@@ -7,15 +7,15 @@ public class Block : MonoBehaviour
 {
     private Rigidbody _rigidBody;
     private bool _isGrounded, _isReleased;
-    
+
     void Start()
-     {
+    {
         _rigidBody = GetComponent<Rigidbody>();
         if (_rigidBody == null)
         {
             Debug.LogError("Objects need a RigidBody");
         }
-        EventHandler.DropBlock.AddListener(Drop);
+        Brain.ins.EventHandler.DropBlockEvent.AddListener(Drop);
     }
 
     private void Drop()
@@ -23,7 +23,7 @@ public class Block : MonoBehaviour
         transform.parent = null;
         _rigidBody.isKinematic = false;
         _isReleased = true;
-        
+
         Debug.Log("Dropped a block");
     }
 

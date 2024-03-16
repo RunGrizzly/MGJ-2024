@@ -15,7 +15,7 @@ public class BlockSpawner : MonoBehaviour
     private float speed = 0f;
 
     public List<Object> blocks;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,11 +24,11 @@ public class BlockSpawner : MonoBehaviour
             Debug.LogError("MainCamera is not tagged, that's why you can't see anything");
             return;
         }
-        
+
         var main = Camera.main;
         var position = main.transform.position;
         var orthographicSize = main.orthographicSize;
-        
+
         _screenLeftBorder = position.x - orthographicSize * Screen.width / Screen.height;
         _screenRightBorder = position.x + orthographicSize * Screen.width / Screen.height;
 
@@ -78,11 +78,11 @@ public class BlockSpawner : MonoBehaviour
 
         var t = transform;
         var p = t.position;
-        Instantiate(block, 
-            new Vector3(p.x, p.y - 1f, p.z), 
+        Instantiate(block,
+            new Vector3(p.x, p.y - 1f, p.z),
             Quaternion.identity,
             t);
-        
+
         StartMovement();
     }
 
