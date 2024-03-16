@@ -3,14 +3,16 @@ using UnityEngine;
 
 public class Block : MonoBehaviour
 {
+    public Player Owner { get; private set; }
     private Rigidbody _rigidBody;
     private bool _settled;
     public bool Settled => _settled;
 
     private bool _settling;
-    
+
     [SerializeField] private float timeToSettle = 3.0f;
     private float _settleTimer;
+
     void Start()
     {
         _rigidBody = GetComponent<Rigidbody>();
@@ -20,6 +22,7 @@ public class Block : MonoBehaviour
         }
 
         _settleTimer = timeToSettle;
+        Owner = Brain.ins.RoundManager.CurrentRound.Player;
         Brain.ins.EventHandler.DropBlockEvent.AddListener(Drop);
     }
 
@@ -37,20 +40,20 @@ public class Block : MonoBehaviour
     private void CheckIfSettled()
     {
         if (!_settling) return;
-        
+
         _settleTimer -= Time.deltaTime;
 
         if (_settleTimer > 0) return;
-        
+
         _settling = false;
         _settled = true;
         Brain.ins.EventHandler.BlockSettledEvent.Invoke(this);
     }
-    
+
     private void OnCollisionEnter(Collision other)
     {
         if (_settled) return;
-        
+
         if (other.gameObject.layer == 6)
         {
             _settling = true;
@@ -60,10 +63,13 @@ public class Block : MonoBehaviour
     private void OnCollisionExit(Collision other)
     {
         if (_settled || !_settling) return;
-        
+
         _settling = false;
         _settleTimer = timeToSettle;
     }
 
-
+    public Vector3 GetHighestPoint()
+    {
+       return _rigidBody.ClosestPointOnBounds(new Vector3(0, Single.PositiveInfinity, 0));
+    }
 }
