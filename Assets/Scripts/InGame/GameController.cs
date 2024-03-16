@@ -2,15 +2,19 @@
 
 namespace DefaultNamespace
 {
-    public class Game : MonoBehaviour
+    public class GameController : MonoBehaviour
     {
         [SerializeField] private BlockSpawner _blockSpawner;
 
         private void OnEnable()
         {
-            _blockSpawner.gameObject.SetActive(false);
             Brain.ins.EventHandler.StartRoundEvent.AddListener(OnStartRound);
             Brain.ins.EventHandler.EndRoundEvent.AddListener(OnEndRound);
+        }
+
+        private void Start()
+        {
+            _blockSpawner.gameObject.SetActive(false);
         }
 
         private void OnStartRound(Round round)

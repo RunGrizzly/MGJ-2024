@@ -11,7 +11,7 @@ public class WordList : ScriptableObject
     public List<string> Adjectives;
     public List<string> Animals;
 
-    public int GetWordCount(WordType wordType, int index) => wordType switch
+    public int GetWordCount(WordType wordType) => wordType switch
     {
         WordType.Verb => Verbs.Count,
         WordType.Adjective => Adjectives.Count,

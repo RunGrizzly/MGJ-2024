@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -310,7 +310,7 @@ MonoBehaviour:
       editorAssetGUID: c5df5f38578eb0e47a8fe41fb605fdd8
       name: GameScene
       _path: Assets/Scenes/GameScene.unity
-    loadInEditor: 1
+    loadInEditor: 0
     loadMethod: 3
   - scene:
       editorAssetGUID: 3a620415bdc2f974683711c4e647ed02
@@ -334,7 +334,7 @@ MonoBehaviour:
       editorAssetGUID: eeb1679798e3cfe4580b1d0608c7ab1b
       name: Cameras
       _path: Assets/Scenes/Cameras.unity
-    loadInEditor: 1
+    loadInEditor: 0
     loadMethod: 3
   _isMainScene: 0
   _version: 1
@@ -831,6 +831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59d5a8912d4a3f241ba6b4b14a65ea14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioSource: {fileID: 1755591562}
 --- !u!1 &1925944520
 GameObject:
   m_ObjectHideFlags: 0
