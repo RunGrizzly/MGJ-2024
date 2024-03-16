@@ -25,7 +25,6 @@ public class RoundEnder: MonoBehaviour
         if (colliders.Length <= 0) return;
         
         if (colliders[0].gameObject.layer != 7) return;
-        _roundManager.CurrentRound.CompleteRound(RoundState.Pass);
-        _eventHandler.EndRoundEvent.Invoke(_roundManager.CurrentRound);
+        _roundManager.EndRound(true);
     }
 }

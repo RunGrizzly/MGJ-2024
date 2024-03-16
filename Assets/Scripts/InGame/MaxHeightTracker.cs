@@ -15,7 +15,6 @@ using UnityEngine;
         private GameObject _activeDisplay;
         [SerializeField] private GameObject _aboveScreenDisplay;
         [SerializeField] private GameObject _onScreenDisplay;
-        [SerializeField] private GameObject _underScreenDisplay;
         [SerializeField] private Camera _gameCamera;
 
         private void OnEnable()

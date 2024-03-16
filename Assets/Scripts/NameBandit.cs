@@ -19,7 +19,7 @@ public class NameBandit : MonoBehaviour
             var word = _sections[_chosenSectionCount].Stop();
             _chosenWords.Add(word);
 
-            Brain.ins.EventHandler.PlaySFXEvent.Invoke(sectionBlips[+_chosenSectionCount]);
+                Brain.ins.EventHandler.PlaySFXEvent.Invoke(sectionBlips[+_chosenSectionCount], 0);
 
             _chosenSectionCount += 1;
         }
