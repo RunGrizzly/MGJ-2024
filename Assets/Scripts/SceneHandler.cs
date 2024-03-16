@@ -1,21 +1,29 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
+public enum Scene
+{
+    MainMenu,
+    Leaderboard,
+    GameScene,
+    Cameras,
+    Round,
+    RoundOver,
+}
 
 public class SceneHandler : MonoBehaviour
 {
     private void Start()
     {
-
         for (int i = 1; i < Display.displays.Length; i++)
         {
             Display.displays[i].Activate();
         }
 
-        //LoadScenes(new List<string>() { "Cameras" });
-        SceneManager.LoadSceneAsync("MainMenu", LoadSceneMode.Additive);
-        // SceneManager.LoadSceneAsync("Leaderboard", LoadSceneMode.Additive);
-        // SceneManager.LoadSceneAsync("GameScene", LoadSceneMode.Additive);
+        LoadScenes(new List<Scene> { Scene.MainMenu, Scene.Cameras, Scene.GameScene,  Scene.Leaderboard , Scene.Round});
     }
 
     public void LoadScenes(List<string> sceneNames)
@@ -26,6 +34,9 @@ public class SceneHandler : MonoBehaviour
         }
     }
 
+    public void LoadScenes(List<Scene> sceneNames) =>
+        LoadScenes(sceneNames.Select(name => Enum.GetName(typeof(Scene), name)).ToList());
+
     public void UnloadScenes(List<string> sceneNames)
     {
         foreach (string sceneName in sceneNames)
@@ -34,5 +45,6 @@ public class SceneHandler : MonoBehaviour
         }
     }
 
-
+    public void UnloadScenes(List<Scene> sceneNames) =>
+        UnloadScenes(sceneNames.Select(name => Enum.GetName(typeof(Scene), name)).ToList());
 }

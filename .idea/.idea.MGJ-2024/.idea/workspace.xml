@@ -5,11 +5,69 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1aa1de97-9200-4616-b30c-235fc6fd9684" name="Changes" comment="More BlockSpawner stuff + Physics">
+      <change afterPath="$PROJECT_DIR$/Assets/Audio.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/AnimeLaser1.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/AnimeLaser1.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/AnimeLaser2.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/AnimeLaser2.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/AnimeLaser3.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/AnimeLaser3.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Controls.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/GameSceneSky_mat.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/GameSceneSky_mat.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/LeaderboardSky_mat.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/LeaderboardSky_mat.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Rendering.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Rendering/New Universal Render Pipeline Asset.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Rendering/New Universal Render Pipeline Asset.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Rendering/New Universal Render Pipeline Asset_Renderer.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Rendering/New Universal Render Pipeline Asset_Renderer.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Rendering/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Rendering/UniversalRenderPipelineGlobalSettings.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Skybox.shadergraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shaders/Skybox.shadergraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ComputeCommandBuffer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IBaseCommandBuffer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IComputeCommandBuffer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ILowLevelCommandBuffer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IRasterCommandBuffer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LowLevelCommandBuffer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RasterCommandBuffer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AdminControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AdminControls.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AdminControls.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AdminControls.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Controls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controls.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Controls.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controls.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Controls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Controls/Controls.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Controls.inputactions.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Controls/Controls.inputactions.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Leaderboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Leaderboard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Leaderboard.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Leaderboard.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainMenu.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Block.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Block.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BlockSpawner.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BlockSpawner.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RoundOver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RoundOver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RoundOver.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RoundOver.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Leaderboard.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Leaderboard.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Managers.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Managers.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Block.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Block.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventHandling/EventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventHandling/EventHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventHandling/Events.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventHandling/Events.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGame/BlockSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGame/BlockSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Medals.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Medals.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NameBandit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NameBandit.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2023.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2023.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,56 +84,57 @@
     <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/56fbdabb435c4d6b9fb8abaff473bd8219e600/4c/90d921ef/Panel.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/56fbdabb435c4d6b9fb8abaff473bd8219e600/5d/615d8a65/RenderChain.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cb3602b5bf2148caa08db7780ec02b1946ae00/ba/bc849d2a/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Prefabs.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Prefabs.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Prefabs.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Prefabs.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Prefabs/Block.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scenes/Cameras.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scenes/Cameras.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scenes/Managers.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scenes/Managers.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scripts/Block.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scripts/Block.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scripts/Block.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scripts/BlockSpawner.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scripts/BlockSpawner.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scripts/BlockSpawner.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scripts/BlockSpawner.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scripts/Brain.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scripts/Brain.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scripts/EventHandling/EventHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scripts/EventHandling/EventHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scripts/EventHandling/EventHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scripts/EventHandling/EventHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scripts/EventHandling/EventHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scripts/EventHandling/Events.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/AdminControls.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/AdminControls.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Leaderboard.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/MainMenu.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/RoundOver.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/RoundOver.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/RoundOver.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/RoundOver.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scenes/Cameras.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scenes/GameScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scenes/GameScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scenes/GameScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scenes/GameScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scenes/Managers.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scenes/Managers.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scenes/Managers.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AdminControls.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/EventHandling/EventHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/EventHandling/Events.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/BlockSpawner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/BlockSpawner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/BlockSpawner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/BlockSpawner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/BlockSpawner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/BlockSpawner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/BlockSpawner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/Round/Round.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/Round/RoundManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/SceneHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/SceneHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/SceneHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/SceneHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scripts/SceneHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scripts/SceneHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/Assets/Scripts/SceneHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/SceneHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/SceneHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@3.0.25/Rider/Editor/Discovery.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/CanvasRenderer/ParentCanvasIsSane.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Button/ButtonTests.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/ProjectSettings/DynamicsManager.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/ProjectSettings/ProjectSettings.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ian-local/Workspace/MGJ-2024/ProjectSettings/TagManager.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/ProjectSettings/EditorBuildSettings.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/ProjectSettings/EditorBuildSettings.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/ProjectSettings/EditorBuildSettings.asset" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2djdwWeHHmVI7i3hY2ui687ffDW" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -85,7 +144,7 @@
     "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Merging main",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -129,10 +188,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="7540">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="7540" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />

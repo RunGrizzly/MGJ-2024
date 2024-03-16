@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
@@ -7,7 +8,7 @@ public class BlockSpawner : MonoBehaviour
 {
     private float _screenLeftBorder, _screenRightBorder = 0.0f;
     private float _objectWidth;
-    private bool _isMovingRight = true;
+    private bool _isMovingRight, _isHoldingBlock = true;
     private InputAction _actionButton;
 
     [SerializeField]
@@ -36,10 +37,9 @@ public class BlockSpawner : MonoBehaviour
         _objectWidth = size.x;
 
         _actionButton = Brain.ins.Controls.FindAction("Everything");
-        Brain.ins.EventHandler.BlockSettledEvent.AddListener(SpawnBlock);
-
-        SpawnBlock(null);
-        StartMovement();
+        Brain.ins.EventHandler.BlockSettledEvent.AddListener(IncrementHeight);
+        
+        SpawnBlock();
     }
 
     void FixedUpdate()
@@ -53,14 +53,10 @@ public class BlockSpawner : MonoBehaviour
 
     void Update()
     {
-        if (_actionButton.WasPressedThisFrame())
-        {
-            Brain.ins.EventHandler.DropBlockEvent.Invoke();
-            LeanTween.cancel(gameObject);
+        if (!_actionButton.WasPressedThisFrame() || !_isHoldingBlock) return;
 
-            var pos = transform.position;
-            LeanTween.move(gameObject, new Vector3 { x = 0, y = pos.y + 1, z = pos.z }, 0.2f);
-        }
+        _isHoldingBlock = false;
+        Brain.ins.EventHandler.DropBlockEvent.Invoke();
     }
 
     private void BounceDirection()
@@ -71,16 +67,25 @@ public class BlockSpawner : MonoBehaviour
         LeanTween.moveX(gameObject, _isMovingRight ? _screenRightBorder : _screenLeftBorder, speed * 2);
     }
 
-    private void SpawnBlock([CanBeNull] GameObject _)
+    private void IncrementHeight([CanBeNull] Block _)
+    {
+        LeanTween.cancel(gameObject);
+        LeanTween.moveY(gameObject, transform.position.y + 1f, 0.2f).setOnComplete(StartMovement);
+        
+        SpawnBlock();
+    }
+    
+    private void SpawnBlock()
     {
         var block = blocks[Random.Range(0, blocks.Count - 1)];
-
+        
         var t = transform;
         var p = t.position;
         Instantiate(block,
             new Vector3(p.x, p.y - 1f, p.z),
             Quaternion.identity,
             t);
+        _isHoldingBlock = true;
 
         StartMovement();
     }
@@ -89,5 +94,5 @@ public class BlockSpawner : MonoBehaviour
     {
         LeanTween.moveX(gameObject, _isMovingRight ? _screenRightBorder : _screenLeftBorder, speed);
     }
-
+    
 }

@@ -591,6 +591,18 @@ MonoBehaviour:
       _path: Assets/Scenes/Round.unity
     loadInEditor: 1
     loadMethod: 3
+  - scene:
+      editorAssetGUID: c8f4db5123dcde1469220d1b2e774322
+      name: RoundOver
+      _path: Assets/Scenes/RoundOver.unity
+    loadInEditor: 0
+    loadMethod: 3
+  - scene:
+      editorAssetGUID: eeb1679798e3cfe4580b1d0608c7ab1b
+      name: Cameras
+      _path: Assets/Scenes/Cameras.unity
+    loadInEditor: 0
+    loadMethod: 3
   _isMainScene: 0
   _version: 1
   _thisScenePath: Assets/Scenes/Managers.unity

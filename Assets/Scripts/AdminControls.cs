@@ -9,7 +9,7 @@ public class AdminControls : MonoBehaviour
     {
         Brain.ins.EventHandler.EndRoundEvent.Invoke(Brain.ins.RoundManager.CurrentRound);
 
-        Brain.ins.SceneHandler.UnloadScenes(new List<string>() { "Round", "Leaderboard", "GameScene" });
+        Brain.ins.SceneHandler.UnloadScenes(new List<string>() { "Round" });
         Brain.ins.SceneHandler.LoadScenes(new List<string>() { "MainMenu" });
     }
 
