@@ -3,6 +3,7 @@ using UnityEngine;
 public class EventHandler : MonoBehaviour
 {
     //Game Events
+    public RoundCreatedEvent RoundCreatedEvent;
     public StartRoundEvent StartRoundEvent;
     public EndRoundEvent EndRoundEvent;
     public PlayerCreatedEvent PlayerCreatedEvent;
@@ -18,6 +19,7 @@ public class EventHandler : MonoBehaviour
     private void Awake()
     {
         //Game Events
+        RoundCreatedEvent ??= new();
         StartRoundEvent ??= new();
         EndRoundEvent ??= new();
         PlayerCreatedEvent ??= new();

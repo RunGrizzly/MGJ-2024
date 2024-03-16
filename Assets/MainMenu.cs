@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
     private void OnEnable()
     {
         Brain.ins.EventHandler.PlayerCreatedEvent.AddListener(OnPlayerCreated);
-        Brain.ins.RoundManager.CurrentRound = new Round();
+        Brain.ins.RoundManager.CreateRound();
         _readyToPlay = false;
     }
 
@@ -22,13 +22,13 @@ public class MainMenu : MonoBehaviour
     {
         if (_readyToPlay && Brain.ins.Controls.Player.Everything.WasPressedThisFrame())
         {
-            RequestNewRound();
+            Brain.ins.RoundManager.StartRound();
+            Brain.ins.SceneHandler.UnloadScenes(new List<Scene> { Scene.MainMenu });
         }
     }
 
     public void RequestNewRound()
     {
-
         Brain.ins.SceneHandler.LoadScenes(new List<string>() { "Round", "Leaderboard", "GameScene" });
         Brain.ins.SceneHandler.UnloadScenes(new List<string>() { "MainMenu" });
     }
