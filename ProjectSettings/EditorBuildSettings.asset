@@ -20,5 +20,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Round.unity
     guid: 14c0773d62de1d944ae9b69e48c3c591
+  - enabled: 1
+    path: Assets/Scenes/RoundOver.unity
+    guid: c8f4db5123dcde1469220d1b2e774322
+  - enabled: 1
+    path: Assets/Scenes/Cameras.unity
+    guid: eeb1679798e3cfe4580b1d0608c7ab1b
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
