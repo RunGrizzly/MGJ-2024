@@ -67,6 +67,7 @@ public class RoundManager : MonoBehaviour
             foreach (var round in rounds)
             {
                 round.DestroyBlocks();
+                round.State = RoundState.Fail;
             }
 
             if (CurrentRound.Ante >= 2)
