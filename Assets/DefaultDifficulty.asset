@@ -64,7 +64,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     SeedWidth: 1
-  - SpawnerPositionCurve: {fileID: 11400000, guid: b33cf6abe9e43f44d8985db60ffe4c0a,
+  - SpawnerPositionCurve: {fileID: 11400000, guid: b054dc54fa35b234593d7bf882cd5265,
       type: 2}
     SpawnerSpeedCurve:
       serializedVersion: 2
@@ -94,10 +94,10 @@ MonoBehaviour:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.0041656494
-        value: 0.99765015
-        inSlope: -0.89998543
-        outSlope: -0.89998543
+        time: -0.022331238
+        value: 0.91422653
+        inSlope: -0.7950582
+        outSlope: -0.7950582
         tangentMode: 34
         weightedMode: 0
         inWeight: 0
@@ -105,8 +105,8 @@ MonoBehaviour:
       - serializedVersion: 3
         time: 1
         value: 0.10141373
-        inSlope: -0.89998543
-        outSlope: -0.89998543
+        inSlope: -0.7950582
+        outSlope: -0.7950582
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
@@ -121,22 +121,22 @@ MonoBehaviour:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: -0.013566641
-        value: 0.25354382
+        time: -0.034175545
+        value: 0.2600746
         inSlope: 0.8414019
-        outSlope: 0.8414019
-        tangentMode: 34
-        weightedMode: 0
+        outSlope: 3.200217
+        tangentMode: 1
+        weightedMode: 3
         inWeight: 0
-        outWeight: 0.33333334
+        outWeight: 0.20697826
       - serializedVersion: 3
         time: 0.9880371
         value: 1.0962951
-        inSlope: 0.8414019
-        outSlope: 0.8414019
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0.33333334
+        inSlope: 0.24259338
+        outSlope: 0.24259338
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.50577414
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -145,10 +145,10 @@ MonoBehaviour:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.0041656494
-        value: 0.99765015
-        inSlope: -0.89998543
-        outSlope: -0.89998543
+        time: -0.03410721
+        value: 0.8226242
+        inSlope: -0.69742334
+        outSlope: -0.69742334
         tangentMode: 34
         weightedMode: 0
         inWeight: 0
@@ -156,8 +156,59 @@ MonoBehaviour:
       - serializedVersion: 3
         time: 1
         value: 0.10141373
-        inSlope: -0.89998543
-        outSlope: -0.89998543
+        inSlope: -0.69742334
+        outSlope: -0.69742334
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    SeedWidth: 1
+  - SpawnerPositionCurve: {fileID: 11400000, guid: b054dc54fa35b234593d7bf882cd5265,
+      type: 2}
+    SpawnerSpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: -0.056255013
+        value: 0.26172253
+        inSlope: 0.8414019
+        outSlope: 5.612164
+        tangentMode: 1
+        weightedMode: 3
+        inWeight: 0
+        outWeight: 0.153164
+      - serializedVersion: 3
+        time: 0.9880371
+        value: 1.0962951
+        inSlope: 0.24259338
+        outSlope: 0.24259338
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.50577414
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    SizeScaler:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: -0.054714203
+        value: 0.7359276
+        inSlope: -0.6015979
+        outSlope: -0.6015979
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.10141373
+        inSlope: -0.6015979
+        outSlope: -0.6015979
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
@@ -172,22 +223,22 @@ MonoBehaviour:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: -0.013566641
-        value: 0.25354382
+        time: -0.09452787
+        value: 0.28625867
         inSlope: 0.8414019
-        outSlope: 0.8414019
-        tangentMode: 34
-        weightedMode: 0
+        outSlope: 7.1066823
+        tangentMode: 1
+        weightedMode: 3
         inWeight: 0
-        outWeight: 0.33333334
+        outWeight: 0.14140658
       - serializedVersion: 3
         time: 0.9880371
         value: 1.0962951
-        inSlope: 0.8414019
-        outSlope: 0.8414019
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0.33333334
+        inSlope: 0.11062633
+        outSlope: 0.11062633
+        tangentMode: 0
+        weightedMode: 3
+        inWeight: 0.4999929
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -196,10 +247,10 @@ MonoBehaviour:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.0041656494
-        value: 0.99765015
-        inSlope: -0.89998543
-        outSlope: -0.89998543
+        time: -0.072380066
+        value: 0.63614655
+        inSlope: -0.49864113
+        outSlope: -0.49864113
         tangentMode: 34
         weightedMode: 0
         inWeight: 0
@@ -207,365 +258,8 @@ MonoBehaviour:
       - serializedVersion: 3
         time: 1
         value: 0.10141373
-        inSlope: -0.89998543
-        outSlope: -0.89998543
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    SeedWidth: 1
-  - SpawnerPositionCurve: {fileID: 11400000, guid: b33cf6abe9e43f44d8985db60ffe4c0a,
-      type: 2}
-    SpawnerSpeedCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: -0.013566641
-        value: 0.25354382
-        inSlope: 0.8414019
-        outSlope: 0.8414019
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.9880371
-        value: 1.0962951
-        inSlope: 0.8414019
-        outSlope: 0.8414019
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    SizeScaler:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0.0041656494
-        value: 0.99765015
-        inSlope: -0.89998543
-        outSlope: -0.89998543
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
-        value: 0.10141373
-        inSlope: -0.89998543
-        outSlope: -0.89998543
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    SeedWidth: 1
-  - SpawnerPositionCurve: {fileID: 11400000, guid: b054dc54fa35b234593d7bf882cd5265,
-      type: 2}
-    SpawnerSpeedCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.2
-        inSlope: 0.6
-        outSlope: 0.6
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
-        value: 0.8
-        inSlope: 0.6
-        outSlope: 0.6
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    SizeScaler:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0.0041656494
-        value: 0.99765015
-        inSlope: -0.89998543
-        outSlope: -0.89998543
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
-        value: 0.10141373
-        inSlope: -0.89998543
-        outSlope: -0.89998543
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    SeedWidth: 1
-  - SpawnerPositionCurve: {fileID: 11400000, guid: b054dc54fa35b234593d7bf882cd5265,
-      type: 2}
-    SpawnerSpeedCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.2
-        inSlope: 0.6
-        outSlope: 0.6
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
-        value: 0.8
-        inSlope: 0.6
-        outSlope: 0.6
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    SizeScaler:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0.0041656494
-        value: 0.99765015
-        inSlope: -0.89998543
-        outSlope: -0.89998543
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
-        value: 0.10141373
-        inSlope: -0.89998543
-        outSlope: -0.89998543
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    SeedWidth: 1
-  - SpawnerPositionCurve: {fileID: 11400000, guid: b054dc54fa35b234593d7bf882cd5265,
-      type: 2}
-    SpawnerSpeedCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.2
-        inSlope: 0.6
-        outSlope: 0.6
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
-        value: 0.8
-        inSlope: 0.6
-        outSlope: 0.6
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    SizeScaler:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0.0041656494
-        value: 0.99765015
-        inSlope: -0.89998543
-        outSlope: -0.89998543
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
-        value: 0.10141373
-        inSlope: -0.89998543
-        outSlope: -0.89998543
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    SeedWidth: 1
-  - SpawnerPositionCurve: {fileID: 11400000, guid: b054dc54fa35b234593d7bf882cd5265,
-      type: 2}
-    SpawnerSpeedCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.2
-        inSlope: 0.6
-        outSlope: 0.6
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
-        value: 0.8
-        inSlope: 0.6
-        outSlope: 0.6
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    SizeScaler:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0.0041656494
-        value: 0.99765015
-        inSlope: -0.89998543
-        outSlope: -0.89998543
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
-        value: 0.10141373
-        inSlope: -0.89998543
-        outSlope: -0.89998543
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    SeedWidth: 1
-  - SpawnerPositionCurve: {fileID: 11400000, guid: b054dc54fa35b234593d7bf882cd5265,
-      type: 2}
-    SpawnerSpeedCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.2
-        inSlope: 0.6
-        outSlope: 0.6
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
-        value: 0.8
-        inSlope: 0.6
-        outSlope: 0.6
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    SizeScaler:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0.0041656494
-        value: 0.99765015
-        inSlope: -0.89998543
-        outSlope: -0.89998543
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
-        value: 0.10141373
-        inSlope: -0.89998543
-        outSlope: -0.89998543
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    SeedWidth: 1
-  - SpawnerPositionCurve: {fileID: 11400000, guid: b054dc54fa35b234593d7bf882cd5265,
-      type: 2}
-    SpawnerSpeedCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.2
-        inSlope: 0.6
-        outSlope: 0.6
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
-        value: 0.8
-        inSlope: 0.6
-        outSlope: 0.6
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    SizeScaler:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0.0041656494
-        value: 0.99765015
-        inSlope: -0.89998543
-        outSlope: -0.89998543
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
-        value: 0.10141373
-        inSlope: -0.89998543
-        outSlope: -0.89998543
+        inSlope: -0.49864113
+        outSlope: -0.49864113
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
