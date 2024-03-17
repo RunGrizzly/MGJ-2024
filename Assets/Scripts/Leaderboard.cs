@@ -81,7 +81,7 @@ public class Leaderboard : MonoBehaviour
         ceilingBound.position = block.transform.position;
     }
 
-    private void OnMedalEarned(Player player, MedalType medalType)
+    private void OnMedalEarned(Player player, MedalType medalType, int score)
     {
         SpawnWidget(medalType);
 
@@ -90,6 +90,7 @@ public class Leaderboard : MonoBehaviour
             MedalPanelElement newMedalPanelElement = Instantiate(_medalPanelElementTemplate, _medalPanelElementList);
             newMedalPanelElement.NameBox.text = player.Name;
             newMedalPanelElement.MedalTitle.text = medalType.ToString();
+            newMedalPanelElement.MedalScore.text = score.ToString();
 
             _medalPanelElements.Add(medalType, newMedalPanelElement);
         }

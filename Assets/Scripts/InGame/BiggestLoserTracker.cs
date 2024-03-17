@@ -12,12 +12,14 @@ public class BiggestLoserTracker : MonoBehaviour
 
     private void OnRoundLost(Round round)
     {
-        if (round.Ante > _biggestLoss)
+        var r = Mathf.Min(Brain.ins.RoundManager.CompletedRounds.Count, round.Ante);
+
+        if (r > _biggestLoss)
         {
             _player = round.Player;
-            _biggestLoss = round.Ante;
-            
-            Brain.ins.EventHandler.MedalEarnedEvent.Invoke(_player, MedalType.BiggestLoser);
+            _biggestLoss = r;
+
+            Brain.ins.EventHandler.MedalEarnedEvent.Invoke(_player, MedalType.BiggestLoser, _biggestLoss);
         }
     }
 }

@@ -9,4 +9,4 @@ public enum MedalType
     BiggestLoser
 }
 
-public class MedalEarnedEvent : UnityEvent<Player, MedalType> { };
+public class MedalEarnedEvent : UnityEvent<Player, MedalType, int> { };
