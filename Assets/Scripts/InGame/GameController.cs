@@ -57,7 +57,7 @@ namespace DefaultNamespace
         private void OnStartRound(Round round)
         {
             _currentRound = round;
-            _currentDifficulty = difficulty._difficultyData[round.Ante - 1];
+            _currentDifficulty = difficulty.GetDifficultyData(round.Ante);
             _floor.transform.position = new Vector3(0, round.StartHeight - 3f,
                 0);
             _floor.GetComponent<Collider>().enabled = true;
