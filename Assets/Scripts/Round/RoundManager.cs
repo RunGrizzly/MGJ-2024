@@ -25,15 +25,17 @@ public class RoundManager : MonoBehaviour
             StartHeight = point
         };
         CurrentRound = round;
-        
+
         AllRounds.Add(CurrentRound);
         Brain.ins.EventHandler.RoundCreatedEvent.Invoke(CurrentRound);
     }
 
     public void StartRound()
     {
+
         CurrentRound.State = RoundState.InProgress;
         Brain.ins.EventHandler.StartRoundEvent.Invoke(CurrentRound);
+        Brain.ins.EventHandler.SetMusicEvent.Invoke("game");
     }
 
     public void UpTheAnte()
@@ -45,7 +47,7 @@ public class RoundManager : MonoBehaviour
             StartHeight = point
         };
         CurrentRound = round;
-        
+
         AllRounds.Add(CurrentRound);
         Brain.ins.EventHandler.RoundCreatedEvent.Invoke(CurrentRound);
         StartRound();
@@ -55,7 +57,7 @@ public class RoundManager : MonoBehaviour
     {
         CurrentRound.State = hasPassed ? RoundState.Pass : RoundState.Fail;
         AllRounds.Add(CurrentRound);
-        
+
         if (hasPassed)
         {
             CurrentRound.FreezeBlocks();
@@ -65,8 +67,9 @@ public class RoundManager : MonoBehaviour
             CurrentRound.DestroyBlocks();
         }
 
-        Brain.ins.SceneHandler.LoadScenes(new List<Scene>{ Scene.RoundOver });
+        Brain.ins.SceneHandler.LoadScenes(new List<Scene> { Scene.RoundOver });
         Brain.ins.EventHandler.EndRoundEvent.Invoke(CurrentRound);
+        Brain.ins.EventHandler.SetMusicEvent.Invoke("menu");
     }
 
     public void SessionOver()

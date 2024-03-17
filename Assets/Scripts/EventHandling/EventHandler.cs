@@ -9,6 +9,7 @@ public class EventHandler : MonoBehaviour
     public PlayerCreatedEvent PlayerCreatedEvent;
     public DropBlockEvent DropBlockEvent;
     public BlockSettledEvent BlockSettledEvent;
+    public SetMusicEvent SetMusicEvent;
 
     //Medals
     public MedalEarnedEvent MedalEarnedEvent;
@@ -25,6 +26,7 @@ public class EventHandler : MonoBehaviour
         PlayerCreatedEvent ??= new();
         DropBlockEvent ??= new();
         BlockSettledEvent ??= new();
+        SetMusicEvent ??= new();
 
         //Medals
         MedalEarnedEvent ??= new();

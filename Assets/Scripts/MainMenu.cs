@@ -16,6 +16,8 @@ public class MainMenu : MonoBehaviour
         _readyToPlay = false;
 
         _callToAction.text = "What's Your Name Champ?";
+
+        Brain.ins.EventHandler.SetMusicEvent.Invoke("menu");
     }
 
     private void OnPlayerCreated(Player player)

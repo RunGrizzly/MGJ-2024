@@ -13,6 +13,10 @@ public class Block : MonoBehaviour
     [SerializeField] private float timeToSettle = 3.0f;
     private float _settleTimer;
 
+
+    public AudioClip _dropAudio = null;
+    public AudioClip _settleAudio = null;
+
     void Start()
     {
         _rigidBody = GetComponent<Rigidbody>();
@@ -25,11 +29,14 @@ public class Block : MonoBehaviour
         Owner = Brain.ins.RoundManager.CurrentRound.Player;
         Brain.ins.EventHandler.DropBlockEvent.AddListener(Drop);
     }
-    
+
     private void Drop(Block _)
     {
         transform.parent = null;
         _rigidBody.isKinematic = false;
+
+        Brain.ins.EventHandler.PlaySFXEvent.Invoke(_dropAudio, 0);
+
     }
 
     private void CheckIfSettled()
@@ -45,7 +52,7 @@ public class Block : MonoBehaviour
             _settleTimer = timeToSettle / 2;
             return;
         }
-        
+
         _settling = false;
         _settled = true;
 
@@ -61,6 +68,7 @@ public class Block : MonoBehaviour
             _settled = true;
             Brain.ins.EventHandler.BlockSettledEvent.Invoke(this);
             Brain.ins.EventHandler.DropBlockEvent.RemoveListener(Drop);
+            Brain.ins.EventHandler.PlaySFXEvent.Invoke(_settleAudio, 0);
         }
     }
 
@@ -88,7 +96,7 @@ public class Block : MonoBehaviour
     {
         _rigidBody.isKinematic = true;
     }
-    
+
     public Vector3 GetHighestPoint()
     {
         return _rigidBody.ClosestPointOnBounds(new Vector3(0, 100f, 0));

@@ -181,7 +181,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 5000
-  field of view: 3
+  field of view: 32
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -208,7 +208,7 @@ Transform:
   m_GameObject: {fileID: 73321888}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.55, z: -225}
+  m_LocalPosition: {x: 0, y: 4.55, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -563,6 +563,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _leaderBoardCanvasGroup: {fileID: 908040045}
   _medalWidgetTemplate: {fileID: 8900949869789195039, guid: cad2e05126d10e54295c671dc3405450,
+    type: 3}
+  _labelTemplate: {fileID: 6475723645976435021, guid: 53dfb26f1c7ac72478093f02d7e485b1,
     type: 3}
   _leaderboardFramer: {fileID: 0}
   floorBound: {fileID: 979332388}

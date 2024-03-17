@@ -1,6 +1,7 @@
 using Cinemachine;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Leaderboard : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class Leaderboard : MonoBehaviour
     private MedalWidget _medalWidgetTemplate;
     private MedalWidget _medalWidgetInstance = null;
 
+
+    [SerializeField] private LeaderboardLabel _labelTemplate;
     [SerializeField] private CinemachineTargetGroup _leaderboardFramer = null;
     [SerializeField] private Transform floorBound = null;
     [SerializeField] private Transform ceilingBound = null;
@@ -25,6 +28,7 @@ public class Leaderboard : MonoBehaviour
         Brain.ins.EventHandler.EndRoundEvent.AddListener(SyncLeaderboard);
         Brain.ins.EventHandler.MedalEarnedEvent.AddListener(DisplayMedal);
         Brain.ins.EventHandler.BlockSettledEvent.AddListener(OnBlockSettled);
+        Brain.ins.EventHandler.EndRoundEvent.AddListener(OnRoundEnd);
 
 
     }
@@ -34,6 +38,7 @@ public class Leaderboard : MonoBehaviour
         Brain.ins.EventHandler.EndRoundEvent.RemoveListener(SyncLeaderboard);
         Brain.ins.EventHandler.MedalEarnedEvent.RemoveListener(DisplayMedal);
         Brain.ins.EventHandler.BlockSettledEvent.RemoveListener(OnBlockSettled);
+        Brain.ins.EventHandler.EndRoundEvent.RemoveListener(OnRoundEnd);
 
         if (_medalWidgetInstance != null)
         {
@@ -41,6 +46,23 @@ public class Leaderboard : MonoBehaviour
             Destroy(_medalWidgetInstance.gameObject);
             _medalWidgetInstance = null;
         }
+    }
+
+    private void OnRoundEnd(Round round)
+    {
+        if (round.State == RoundState.Pass)
+        {
+            LeaderboardLabel newLabel = Instantiate(_labelTemplate, transform);
+
+            var labelPos = round.Blocks[round.Blocks.Count - 1].GetHighestPoint();
+            labelPos.z = -1;
+            labelPos.x = 0;
+
+            newLabel.transform.position = labelPos;
+
+            newLabel.NameBox.text = round.Player.Name;
+        }
+
     }
 
     private void OnBlockSettled(Block block)
