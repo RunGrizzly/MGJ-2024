@@ -1,3 +1,4 @@
+using Cinemachine;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -10,6 +11,12 @@ public class Leaderboard : MonoBehaviour
     private MedalWidget _medalWidgetTemplate;
     private MedalWidget _medalWidgetInstance = null;
 
+    [SerializeField] private CinemachineTargetGroup _leaderboardFramer = null;
+    [SerializeField] private Transform floorBound = null;
+    [SerializeField] private Transform ceilingBound = null;
+
+
+
     public SerializableDictionary<MedalType, Player> medalMap = new SerializableDictionary<MedalType, Player>();
 
 
@@ -17,12 +24,16 @@ public class Leaderboard : MonoBehaviour
     {
         Brain.ins.EventHandler.EndRoundEvent.AddListener(SyncLeaderboard);
         Brain.ins.EventHandler.MedalEarnedEvent.AddListener(DisplayMedal);
+        Brain.ins.EventHandler.BlockSettledEvent.AddListener(OnBlockSettled);
+
+
     }
 
     private void OnDisable()
     {
         Brain.ins.EventHandler.EndRoundEvent.RemoveListener(SyncLeaderboard);
         Brain.ins.EventHandler.MedalEarnedEvent.RemoveListener(DisplayMedal);
+        Brain.ins.EventHandler.BlockSettledEvent.RemoveListener(OnBlockSettled);
 
         if (_medalWidgetInstance != null)
         {
@@ -30,6 +41,14 @@ public class Leaderboard : MonoBehaviour
             Destroy(_medalWidgetInstance.gameObject);
             _medalWidgetInstance = null;
         }
+    }
+
+    private void OnBlockSettled(Block block)
+    {
+        _leaderboardFramer.m_Targets[0].target = floorBound;
+        _leaderboardFramer.m_Targets[1].target = ceilingBound;
+
+        ceilingBound.position = block.transform.position;
     }
 
     private void DisplayMedal(Player player, MedalType medalType)
