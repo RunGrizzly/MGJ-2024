@@ -1,6 +1,7 @@
 ﻿using System;
 using Cinemachine;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace DefaultNamespace
 {
@@ -13,6 +14,8 @@ namespace DefaultNamespace
         private GameObject _floor, _target;
 
         [SerializeField] private CinemachineTargetGroup _targetGroup;
+
+        public GameObject Ground;
         
         public Difficulty difficulty;
 
@@ -20,6 +23,8 @@ namespace DefaultNamespace
 
         private DifficultyData _currentDifficulty;
         private Round _currentRound;
+
+        private GameObject bottomCamObj;
         private void OnEnable()
         {
             Brain.ins.EventHandler.StartRoundEvent.AddListener(OnStartRound);
@@ -40,9 +45,11 @@ namespace DefaultNamespace
         {
             _floor = Instantiate(_floorPrefab, new Vector3(0f, 0f, 0f), Quaternion.identity);
             _target = Instantiate(_targetPrefab, new Vector3(0f, 0f, 0f), Quaternion.identity);
+
+            bottomCamObj = Instantiate(new GameObject(), Ground.transform.position, Quaternion.identity);
             
-            _targetGroup.AddMember(_floor.transform, 1f, 0);
             _targetGroup.AddMember(_target.transform.GetChild(0).transform, 1f, 0);
+            _targetGroup.AddMember(bottomCamObj.transform, 1f, 0);
         }
 
         private void OnStartRound(Round round)
@@ -54,6 +61,7 @@ namespace DefaultNamespace
             
             _target.transform.position = new Vector3(_target.transform.position.x, round.StartHeight + round.Height, _target.transform.position.z);
             
+            bottomCamObj.transform.position = new Vector3(_floor.transform.position.x, round.StartHeight, _floor.transform.position.z);
             _blockSpawner = Instantiate(_blockSpawnerPrefab, new Vector3(0f, _target.transform.GetChild(0).transform.position.y, 0f), Quaternion.identity);
             blockSpawnerScript = _blockSpawner.GetComponent<BlockSpawner>();
                 blockSpawnerScript.SetSpeed(_currentDifficulty.SpawnerSpeed);
