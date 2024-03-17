@@ -94,6 +94,7 @@ public class RoundManager : MonoBehaviour
             {
                 round.DestroyBlocks();
                 round.State = RoundState.Fail;
+                Brain.ins.EventHandler.RoundLostEvent.Invoke(CurrentRound);
             }
 
             if (CurrentRound.Ante >= 2)

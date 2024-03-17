@@ -41,9 +41,9 @@ public class RoundOver : MonoBehaviour
         }
         else if (obj.interaction is TapInteraction)
         {
+            Brain.ins.RoundManager.SessionOver();
             Brain.ins.SceneHandler.UnloadScenes(new List<Scene>{Scene.RoundOver});
             Brain.ins.SceneHandler.LoadScenes(new List<Scene>{Scene.MainMenu});
-            Brain.ins.RoundManager.SessionOver();
             Debug.Log("Go back to menu, bitch!");
         }
     }
