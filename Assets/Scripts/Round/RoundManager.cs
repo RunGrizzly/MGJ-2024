@@ -88,25 +88,28 @@ public class RoundManager : MonoBehaviour
             }
 
 
-            CurrentRound.DestroyBlocks();
+            CurrentRound.DestroyBlocks();               
+            Brain.ins.EventHandler.RoundLostEvent.Invoke(CurrentRound);
+
             var rounds = CompletedRounds.Where(r => r.Session == CurrentRound.Session);
             foreach (var round in rounds)
             {
                 round.DestroyBlocks();
                 round.State = RoundState.Fail;
-                Brain.ins.EventHandler.RoundLostEvent.Invoke(CurrentRound);
+                Brain.ins.EventHandler.RoundLostEvent.Invoke(round);
             }
 
-            if (CurrentRound.Ante >= 2)
-            {
-                for (int i = 1; i <= Math.Min(CurrentRound.Ante, CompletedRounds.Count); i++)
-                {
-                    var lastRound = CompletedRounds.Last();
-                    lastRound.DestroyBlocks();
-                    lastRound.State = RoundState.Lost;
-                    Brain.ins.EventHandler.RoundLostEvent.Invoke(CurrentRound);
-                }
-            }
+            // TODO: Discuss Anti goal loss nonsense
+            // if (CurrentRound.Ante >= 2)
+            // {
+            //     for (int i = 1; i <= Math.Min(CurrentRound.Ante, CompletedRounds.Count); i++)
+            //     {
+            //         var lastRound = CompletedRounds.Last();
+            //         lastRound.DestroyBlocks();
+            //         lastRound.State = RoundState.Lost;
+            //         Brain.ins.EventHandler.RoundLostEvent.Invoke(lastRound);
+            //     }
+            // }
         }
 
         Brain.ins.SceneHandler.LoadScenes(new List<Scene> { Scene.RoundOver });
