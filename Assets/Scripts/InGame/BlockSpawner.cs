@@ -88,7 +88,7 @@ public class BlockSpawner : MonoBehaviour
 
     private Plane plane = new(Vector3.back, Vector3.zero);
 
-    public void SetDifficulty(DifficultyData currentDifficulty, Round round)
+    public void SetDifficulty(DifficultyData currentDifficulty)
     {
         _currentDifficulty = currentDifficulty;
         LeanTween.cancel(_movementTween?.id ?? 0);
@@ -107,7 +107,7 @@ public class BlockSpawner : MonoBehaviour
             right = rightRay.GetPoint(distanceR).x;
         }
 
-        _movementTween = LeanTween.value(gameObject, 0, 1, _currentDifficulty.SpawnerSpeedCurve.Evaluate(round.Blocks.Count / round.Height))
+        _movementTween = LeanTween.value(gameObject, 0, 1, 1)
             .setOnUpdate((val) =>
             {
                 var progress = currentDifficulty.SpawnerPositionCurve.Evaluate(val);

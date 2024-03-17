@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1aa1de97-9200-4616-b30c-235fc6fd9684" name="Changes" comment="Merge conflicts">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InGame/CurrentHeightTracker.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InGame/CurrentHeightTracker.cs.meta" afterDir="false" />
+    <list default="true" id="1aa1de97-9200-4616-b30c-235fc6fd9684" name="Changes" comment="Added spawner speed curve">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MGJ-2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MGJ-2024/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Round/Round.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Round/Round.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Round/RoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Round/RoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/RoundOver.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/RoundOver.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGame/BlockSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGame/BlockSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGame/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGame/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,12 +27,23 @@
     <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/36128ec596ab42c8af4441b8e0cdd33a1a2c00/21/004050fd/Camera.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/36128ec596ab42c8af4441b8e0cdd33a1a2c00/65/84d8d7bb/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3fc70802b3194c35a6873c741765df0a10fc00/60/79599405/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/AdminControls.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/AdminControls.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/DefaultDifficulty.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/DefaultDifficulty.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Leaderboard.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/MainMenu.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Prefabs/Block.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Prefabs/Block.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Prefabs/Block.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Prefabs/Block.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Prefabs/KillPlane.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Prefabs/UI/AboveScreenMaxHeightLabel.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Prefabs/UI/AboveScreenMaxHeightLabel.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Prefabs/UI/OnScreenMaxHeightLabel.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Prefabs/UI/OnScreenMaxHeightLabel.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/RoundOver.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/RoundOver.cs" root0="SKIP_HIGHLIGHTING" />
@@ -42,17 +54,25 @@
     <setting file="mock://D:/MGJ-2024/Assets/Scenes/GameScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scenes/GameScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scenes/GameScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scenes/GameScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scenes/GameScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scenes/GameScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scenes/GameScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scenes/Leaderboard.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scenes/Leaderboard.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scenes/Leaderboard.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scenes/Leaderboard.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scenes/Leaderboard.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scenes/Managers.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scenes/Managers.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scenes/Managers.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scenes/Managers.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scenes/Managers.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scenes/Round.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scenes/Round.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/ScreenLabel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ScreenLabel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/ScreenLabel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/ScriptableObjects/WordList.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/AdminControls.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AdminControls.cs" root0="FORCE_HIGHLIGHTING" />
@@ -63,12 +83,18 @@
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/Block.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/Block.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/Block.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/Block.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/DifficultyData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/EventHandling/EventHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/EventHandling/Events.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/EventHandling/Events.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/EventHandling/Events.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/EventHandling/Events.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/EventHandling/Events.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/EventHandling/Events.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/BlockSpawner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/BlockSpawner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/BlockSpawner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/BlockSpawner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/BlockSpawner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/BlockSpawner.cs" root0="SKIP_HIGHLIGHTING" />
@@ -87,6 +113,18 @@
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/GameController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/GameController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/GameController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/GameController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/GameController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/GameController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/GameController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/GameController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/GameController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/GameController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/GameController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/GameController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/MaxHeightTracker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/MaxHeightTracker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/MaxHeightTracker.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/InGame/MaxHeightTracker.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/NameBandit.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/NameBandit.cs" root0="SKIP_HIGHLIGHTING" />
@@ -99,9 +137,19 @@
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/Player.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/Round/Round.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/Round/Round.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/Round/Round.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/Round/Round.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/Round/Round.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/Round/Round.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/Round/RoundManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/Round/RoundManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/Round/RoundManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/Round/RoundManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/Round/RoundManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/Round/RoundManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/RoundOver.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RoundOver.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/MGJ-2024/Assets/Scripts/RoundOver.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/SceneHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/MGJ-2024/Assets/Scripts/SceneHandler.cs" root0="SKIP_HIGHLIGHTING" />
@@ -150,7 +198,7 @@
     "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Merging main",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -194,10 +242,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="884">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="884" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -271,7 +319,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710609039914</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added spawner speed curve">
+      <option name="closed" value="true" />
+      <created>1710650130716</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1710650130716</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,6 +356,26 @@
     <MESSAGE value="Merge conflict" />
     <MESSAGE value="Added MaxHeightTracker to Round Scene" />
     <MESSAGE value="Merge conflicts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge conflicts" />
+    <MESSAGE value="Added spawner speed curve" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added spawner speed curve" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/InGame/BlockSpawner.cs</url>
+          <line>80</line>
+          <properties documentPath="D:\MGJ-2024\Assets\Scripts\InGame\BlockSpawner.cs" initialLine="80" containingFunctionPresentation="Method 'SetSpeed'">
+            <startOffsets>
+              <option value="2235" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2266" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
