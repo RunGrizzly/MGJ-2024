@@ -1,48 +1,32 @@
-using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 
 public class BlockSpawner : MonoBehaviour
 {
     private float _screenLeftBorder, _screenRightBorder = 0.0f;
-    private float _objectWidth;
     private bool _isMovingRight = true;
     private Block _heldBlock;
     private bool _isHoldingBlock => _heldBlock != null;
     private InputAction _actionButton;
 
-    [FormerlySerializedAs("speed")] [SerializeField] private float _speed = 0f;
-
     public List<Object> blocks;
     private float _width = 1f;
+    private DifficultyData _currentDifficulty;
+    private LTDescr _movementTween;
 
     // Start is called before the first frame update
     void Start()
     {
         CalculateCameraBounds();
 
-        var meshRenderer = GetComponent<MeshRenderer>();
-        var size = meshRenderer.bounds.size;
-        _objectWidth = size.x;
-
         _actionButton = Brain.ins.Controls.FindAction("Everything");
         Brain.ins.EventHandler.BlockSettledEvent.AddListener(IncrementHeight);
 
         SpawnBlock();
-        StartMovement();
-    }
-
-    void FixedUpdate()
-    {
-        var positionX = transform.position.x;
-        if (positionX >= _screenRightBorder || positionX <= _screenLeftBorder)
-        {
-            BounceDirection();
-        }
     }
 
     void Update()
@@ -74,19 +58,8 @@ public class BlockSpawner : MonoBehaviour
         _screenRightBorder = position.x + orthographicSize * Screen.width / Screen.height;
     }
 
-    private void BounceDirection()
-    {
-        LeanTween.cancel(gameObject);
-        _isMovingRight = !_isMovingRight;
-
-        LeanTween.moveX(gameObject, _isMovingRight ? _screenRightBorder : _screenLeftBorder, _speed * 2);
-    }
-
     private void IncrementHeight([CanBeNull] Block _)
     {
-        //LeanTween.cancel(gameObject);
-        //LeanTween.moveY(gameObject, transform.position.y + 1f, 0.2f).setOnComplete(StartMovement);
-
         SpawnBlock();
     }
 
@@ -105,7 +78,7 @@ public class BlockSpawner : MonoBehaviour
 
     public void SetSpeed(float speed)
     {
-        _speed = speed;
+        _movementTween.setSpeed(speed);
     }
 
     public void SetNextBlockWidth(float width)
@@ -113,8 +86,33 @@ public class BlockSpawner : MonoBehaviour
         _width = width;
     }
 
-    private void StartMovement()
+    private Plane plane = new(Vector3.back, Vector3.zero);
+
+    public void SetDifficulty(DifficultyData currentDifficulty)
     {
-        LeanTween.moveX(gameObject, _isMovingRight ? _screenRightBorder : _screenLeftBorder, _speed);
+        _currentDifficulty = currentDifficulty;
+        LeanTween.cancel(_movementTween?.id ?? 0);
+        float left = 0;
+        float right = 0;
+
+        var leftRay = Camera.main.ScreenPointToRay(new Vector3(0, 0));
+        if (plane.Raycast(leftRay, out var distanceL))
+        {
+            left = leftRay.GetPoint(distanceL).x;
+        }
+
+        var rightRay = Camera.main.ScreenPointToRay(new Vector3(Screen.width, 0));
+        if (plane.Raycast(rightRay, out var distanceR))
+        {
+            right = rightRay.GetPoint(distanceR).x;
+        }
+
+        _movementTween = LeanTween.value(gameObject, 0, 1, 1)
+            .setOnUpdate((val) =>
+            {
+                var progress = currentDifficulty.SpawnerPositionCurve.Evaluate(val);
+                var newPos = (right - left) * progress + left;
+                transform.position = new Vector3(newPos, transform.position.y, transform.position.z);
+            }).setLoopCount(int.MaxValue).setSpeed(_currentDifficulty.SpawnerSpeedCurve.Evaluate(0));
     }
 }
