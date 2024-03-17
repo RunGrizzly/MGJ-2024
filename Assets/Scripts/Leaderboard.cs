@@ -2,6 +2,7 @@ using Cinemachine;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 public class Leaderboard : MonoBehaviour
 {
@@ -9,8 +10,12 @@ public class Leaderboard : MonoBehaviour
     private CanvasGroup _leaderBoardCanvasGroup;
 
     [SerializeField]
-    private MedalWidget _medalWidgetTemplate;
+    private MedalWidget _medalWidgetTemplate = null;
     private MedalWidget _medalWidgetInstance = null;
+
+    [SerializeField]
+    private MedalPanelElement _medalPanelElementTemplate = null;
+    private MedalPanelElement _medalPanelElementInstance = null;
 
 
     [SerializeField] private LeaderboardLabel _labelTemplate;
@@ -20,13 +25,16 @@ public class Leaderboard : MonoBehaviour
 
 
 
-    public SerializableDictionary<MedalType, Player> medalMap = new SerializableDictionary<MedalType, Player>();
+
+    public SerializableDictionary<MedalType, Player> _medalMap = new();
+    public SerializableDictionary<MedalType, MedalPanelElement> _medalPanelElements = new();
+    public RectTransform _medalPanelElementList = null;
 
 
     private void OnEnable()
     {
         Brain.ins.EventHandler.EndRoundEvent.AddListener(SyncLeaderboard);
-        Brain.ins.EventHandler.MedalEarnedEvent.AddListener(DisplayMedal);
+        Brain.ins.EventHandler.MedalEarnedEvent.AddListener(OnMedalEarned);
         Brain.ins.EventHandler.BlockSettledEvent.AddListener(OnBlockSettled);
         Brain.ins.EventHandler.EndRoundEvent.AddListener(OnRoundEnd);
 
@@ -36,7 +44,7 @@ public class Leaderboard : MonoBehaviour
     private void OnDisable()
     {
         Brain.ins.EventHandler.EndRoundEvent.RemoveListener(SyncLeaderboard);
-        Brain.ins.EventHandler.MedalEarnedEvent.RemoveListener(DisplayMedal);
+        Brain.ins.EventHandler.MedalEarnedEvent.RemoveListener(OnMedalEarned);
         Brain.ins.EventHandler.BlockSettledEvent.RemoveListener(OnBlockSettled);
         Brain.ins.EventHandler.EndRoundEvent.RemoveListener(OnRoundEnd);
 
@@ -73,17 +81,32 @@ public class Leaderboard : MonoBehaviour
         ceilingBound.position = block.transform.position;
     }
 
-    private void DisplayMedal(Player player, MedalType medalType)
+    private void OnMedalEarned(Player player, MedalType medalType)
     {
         SpawnWidget(medalType);
 
-        if (!medalMap.Contains(medalType))
+        if (!_medalPanelElements.ContainsKey(medalType))
         {
-            medalMap.Add(medalType, player);
+            MedalPanelElement newMedalPanelElement = Instantiate(_medalPanelElementTemplate, _medalPanelElementList);
+            newMedalPanelElement.NameBox.text = player.Name;
+            newMedalPanelElement.MedalTitle.text = medalType.ToString();
+
+            _medalPanelElements.Add(medalType, newMedalPanelElement);
         }
         else
         {
-            medalMap[medalType] = player;
+            _medalPanelElements[medalType].NameBox.text = player.Name;
+        }
+
+
+
+        if (!_medalMap.Contains(medalType))
+        {
+            _medalMap.Add(medalType, player);
+        }
+        else
+        {
+            _medalMap[medalType] = player;
         }
 
         // Debug.LogFormat("{0} achieved {1}", player.Name, medalType.ToString());
@@ -104,6 +127,10 @@ public class Leaderboard : MonoBehaviour
             _medalWidgetInstance = null;
         }
 
+
+
+
+
         _medalWidgetInstance = Instantiate(_medalWidgetTemplate, _leaderBoardCanvasGroup.transform);
         _medalWidgetInstance.WidgetText.text = medalType.ToString();
 
@@ -113,6 +140,7 @@ public class Leaderboard : MonoBehaviour
             Brain.ins.EventHandler.PlaySFXEvent.Invoke(_medalWidgetInstance.MedalJingleSting, 0);
             Brain.ins.EventHandler.PlaySFXEvent.Invoke(_medalWidgetInstance.MedalWhooshSting, 0.5f);
         }
+
 
         LeanTween.value(gameObject, 0, 1, 0.5f).setEase(LeanTweenType.easeOutElastic)
 

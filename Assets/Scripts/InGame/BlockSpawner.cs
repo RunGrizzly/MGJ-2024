@@ -101,7 +101,7 @@ public class BlockSpawner : MonoBehaviour
             left = leftRay.GetPoint(distanceL).x;
         }
 
-        var rightRay = Camera.main.ScreenPointToRay(new Vector3(Screen.width, 0));
+        var rightRay = Camera.main.ScreenPointToRay(new Vector3(Camera.main.pixelWidth, 0));
         if (plane.Raycast(rightRay, out var distanceR))
         {
             right = rightRay.GetPoint(distanceR).x;

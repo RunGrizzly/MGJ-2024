@@ -58,12 +58,12 @@ namespace DefaultNamespace
         {
             _currentRound = round;
             _currentDifficulty = difficulty._difficultyData[round.Ante - 1];
-            _floor.transform.position = new Vector3(_floor.transform.position.x, round.StartHeight - 3f,
-                _floor.transform.position.z);
+            _floor.transform.position = new Vector3(0, round.StartHeight - 3f,
+                0);
             _floor.GetComponent<Collider>().enabled = true;
 
-            _target.transform.position = new Vector3(_target.transform.position.x, round.StartHeight + round.Height,
-                _target.transform.position.z);
+            _target.transform.position = new Vector3(0, round.StartHeight + round.Height,
+                0);
 
             bottomCamObj.transform.position = new Vector3(_floor.transform.position.x, round.StartHeight,
                 _floor.transform.position.z);
