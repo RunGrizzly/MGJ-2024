@@ -6,6 +6,7 @@ public class EventHandler : MonoBehaviour
     public RoundCreatedEvent RoundCreatedEvent;
     public StartRoundEvent StartRoundEvent;
     public EndRoundEvent EndRoundEvent;
+    public SessionEndEvent SessionEndEvent;
     public RoundLostEvent RoundLostEvent { get; set; }
     public PlayerCreatedEvent PlayerCreatedEvent;
     public DropBlockEvent DropBlockEvent;
@@ -25,6 +26,7 @@ public class EventHandler : MonoBehaviour
         StartRoundEvent ??= new();
         EndRoundEvent ??= new();
         RoundLostEvent ??= new();
+        SessionEndEvent ??= new();
         PlayerCreatedEvent ??= new();
         DropBlockEvent ??= new();
         BlockSettledEvent ??= new();
