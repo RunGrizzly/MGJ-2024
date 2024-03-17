@@ -1,20 +1,15 @@
 using Cinemachine;
-using Unity.Mathematics;
+using ScriptableObjects;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
-using UnityEngine.UI;
 
 public class Leaderboard : MonoBehaviour
 {
-    [SerializeField]
-    private CanvasGroup _leaderBoardCanvasGroup;
+    [SerializeField] private CanvasGroup _leaderBoardCanvasGroup;
 
-    [SerializeField]
-    private MedalWidget _medalWidgetTemplate = null;
+    [SerializeField] private MedalWidget _medalWidgetTemplate = null;
     private MedalWidget _medalWidgetInstance = null;
 
-    [SerializeField]
-    private MedalPanelElement _medalPanelElementTemplate = null;
+    [SerializeField] private MedalPanelElement _medalPanelElementTemplate = null;
     private MedalPanelElement _medalPanelElementInstance = null;
 
 
@@ -22,11 +17,9 @@ public class Leaderboard : MonoBehaviour
     [SerializeField] private CinemachineTargetGroup _leaderboardFramer = null;
     [SerializeField] private Transform floorBound = null;
     [SerializeField] private Transform ceilingBound = null;
+    [SerializeField] private GameHistory _gameHistory = null;
 
 
-
-
-    public SerializableDictionary<MedalType, Player> _medalMap = new();
     public SerializableDictionary<MedalType, MedalPanelElement> _medalPanelElements = new();
     public RectTransform _medalPanelElementList = null;
 
@@ -38,7 +31,10 @@ public class Leaderboard : MonoBehaviour
         Brain.ins.EventHandler.BlockSettledEvent.AddListener(OnBlockSettled);
         Brain.ins.EventHandler.EndRoundEvent.AddListener(OnRoundEnd);
 
-
+        foreach (var (key, value) in _gameHistory.Medals)
+        {
+            OnMedalEarned(value.Player, key, value.Score);
+        }
     }
 
     private void OnDisable()
@@ -70,7 +66,6 @@ public class Leaderboard : MonoBehaviour
 
             newLabel.NameBox.text = round.Player.Name;
         }
-
     }
 
     private void OnBlockSettled(Block block)
@@ -100,14 +95,23 @@ public class Leaderboard : MonoBehaviour
         }
 
 
-
-        if (!_medalMap.Contains(medalType))
+        if (!_gameHistory.Medals.Contains(medalType))
         {
-            _medalMap.Add(medalType, player);
+            _gameHistory.Medals.Add(medalType, new MedalData
+            {
+                MedalType = medalType,
+                Player = player,
+                Score = score,
+            });
         }
         else
         {
-            _medalMap[medalType] = player;
+            _gameHistory.Medals[medalType] = new MedalData
+            {
+                MedalType = medalType,
+                Player = player,
+                Score = score
+            };
         }
 
         // Debug.LogFormat("{0} achieved {1}", player.Name, medalType.ToString());
@@ -115,7 +119,8 @@ public class Leaderboard : MonoBehaviour
 
     private void SyncLeaderboard(Round context)
     {
-        Debug.LogFormat("Leaderboard received a sync call from an round with the {0} win condition", context.ToString());
+        Debug.LogFormat("Leaderboard received a sync call from an round with the {0} win condition",
+            context.ToString());
     }
 
 
@@ -127,9 +132,6 @@ public class Leaderboard : MonoBehaviour
             Destroy(_medalWidgetInstance.gameObject);
             _medalWidgetInstance = null;
         }
-
-
-
 
 
         _medalWidgetInstance = Instantiate(_medalWidgetTemplate, _leaderBoardCanvasGroup.transform);
@@ -144,28 +146,19 @@ public class Leaderboard : MonoBehaviour
 
 
         LeanTween.value(gameObject, 0, 1, 0.5f).setEase(LeanTweenType.easeOutElastic)
-
-        .setOnUpdate((float val) =>
-        {
-            _medalWidgetInstance.transform.localScale = Vector3.one * val;
-        })
-
-        .setOnComplete(() =>
-        {
-            LeanTween.delayedCall(gameObject, 0.85f, () =>
+            .setOnUpdate((float val) => { _medalWidgetInstance.transform.localScale = Vector3.one * val; })
+            .setOnComplete(() =>
             {
-                LeanTween.value(0, Screen.width, 0.6f).setEase(LeanTweenType.easeOutExpo)
-
-
-                .setOnUpdate((float val) =>
+                LeanTween.delayedCall(gameObject, 0.85f, () =>
                 {
-                    _medalWidgetInstance.GetComponent<RectTransform>().anchoredPosition = new Vector2(-val, _medalWidgetInstance.GetComponent<RectTransform>().anchoredPosition.y);
-                })
-
-                .setOnComplete(() => Destroy(_medalWidgetInstance.gameObject));
+                    LeanTween.value(0, Screen.width, 0.6f).setEase(LeanTweenType.easeOutExpo)
+                        .setOnUpdate((float val) =>
+                        {
+                            _medalWidgetInstance.GetComponent<RectTransform>().anchoredPosition = new Vector2(-val,
+                                _medalWidgetInstance.GetComponent<RectTransform>().anchoredPosition.y);
+                        })
+                        .setOnComplete(() => Destroy(_medalWidgetInstance.gameObject));
+                });
             });
-        });
-
     }
-
 }

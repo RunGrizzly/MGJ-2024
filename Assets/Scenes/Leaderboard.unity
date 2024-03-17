@@ -572,9 +572,7 @@ MonoBehaviour:
   _leaderboardFramer: {fileID: 0}
   floorBound: {fileID: 979332388}
   ceilingBound: {fileID: 1993870761}
-  _medalMap:
-    m_keys: 
-    m_values: []
+  _gameHistory: {fileID: 11400000, guid: 14d2a29219a523946930479e37863d5a, type: 2}
   _medalPanelElements:
     m_keys: 
     m_values: []

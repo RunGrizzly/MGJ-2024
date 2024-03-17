@@ -48,8 +48,13 @@ public class MaxHeightTracker : MonoBehaviour
         _isDisplaying = false;
         _aboveScreenDisplay.Hide();
         _onScreenDisplay.Hide();
+        
+        if (_hasChanged)
+        {
+            Brain.ins.EventHandler.MedalEarnedEvent.Invoke(_player, MedalType.HighestPointReached, Convert.ToInt32(_currentHighestPoint.y));
+            _hasChanged = false;
+        }
     }
-
 
     private void FixedUpdate()
     {
@@ -98,11 +103,14 @@ public class MaxHeightTracker : MonoBehaviour
         }
     }
 
+    private bool _hasChanged = false;
+
     private void OnBlockSettled(Block block)
     {
         var highestPoint = block.GetHighestPoint();
         if (highestPoint.y > _currentHighestPoint.y)
         {
+            _hasChanged = true;
             _currentHighestPoint = highestPoint;
             _player = block.Owner;
         }
