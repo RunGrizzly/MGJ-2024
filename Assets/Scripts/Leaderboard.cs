@@ -1,4 +1,3 @@
-using System;
 using System.Linq;
 using Cinemachine;
 using ScriptableObjects;
@@ -31,7 +30,7 @@ public class Leaderboard : MonoBehaviour
         Brain.ins.EventHandler.EndRoundEvent.AddListener(SyncLeaderboard);
         Brain.ins.EventHandler.MedalEarnedEvent.AddListener(OnMedalEarned);
         Brain.ins.EventHandler.BlockSettledEvent.AddListener(OnBlockSettled);
-        Brain.ins.EventHandler.EndRoundEvent.AddListener(OnRoundEnd);
+        Brain.ins.EventHandler.SessionEndEvent.AddListener(OnSessionEnd);
 
         foreach (var (key, value) in _gameHistory.Medals.ToList())
         {
@@ -44,7 +43,8 @@ public class Leaderboard : MonoBehaviour
         Brain.ins.EventHandler.EndRoundEvent.RemoveListener(SyncLeaderboard);
         Brain.ins.EventHandler.MedalEarnedEvent.RemoveListener(OnMedalEarned);
         Brain.ins.EventHandler.BlockSettledEvent.RemoveListener(OnBlockSettled);
-        Brain.ins.EventHandler.EndRoundEvent.RemoveListener(OnRoundEnd);
+        Brain.ins.EventHandler.SessionEndEvent.AddListener(OnSessionEnd);
+
 
         if (_medalWidgetInstance != null)
         {
@@ -54,7 +54,7 @@ public class Leaderboard : MonoBehaviour
         }
     }
 
-    private void OnRoundEnd(Round round)
+    private void OnSessionEnd(Round round)
     {
         if (round.State == RoundState.Pass)
         {

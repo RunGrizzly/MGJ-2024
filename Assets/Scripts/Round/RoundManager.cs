@@ -88,6 +88,7 @@ public class RoundManager : MonoBehaviour
 
     public void SessionOver()
     {
+        Brain.ins.EventHandler.SessionEndEvent.Invoke(CurrentRound);
         _sessionCount += 1;
     }
 }
