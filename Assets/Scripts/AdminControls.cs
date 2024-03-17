@@ -15,12 +15,12 @@ public class AdminControls : MonoBehaviour
 
     public void TriggerWobblyMedal()
     {
-        Brain.ins.EventHandler.MedalEarnedEvent.Invoke(Brain.ins.RoundManager.CurrentRound.Player, MedalType.WobbliestPlayer, 1);
+        // Brain.ins.EventHandler.MedalEarnedEvent.Invoke(Brain.ins.RoundManager.CurrentRound.Player, MedalType.WobbliestPlayer, 1);
     }
 
     public void TriggerEffortMedal()
     {
-        Brain.ins.EventHandler.MedalEarnedEvent.Invoke(Brain.ins.RoundManager.CurrentRound.Player, MedalType.Effort, 1);
+        Brain.ins.EventHandler.MedalEarnedEvent.Invoke(Brain.ins.RoundManager.CurrentRound.Player, MedalType.MostBlocks, 1);
     }
 
     public void TriggerWasterMedal()
