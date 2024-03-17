@@ -4,6 +4,7 @@ using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public class BlockSpawner : MonoBehaviour
 {
@@ -14,9 +15,10 @@ public class BlockSpawner : MonoBehaviour
     private bool _isHoldingBlock => _heldBlock != null;
     private InputAction _actionButton;
 
-    [SerializeField] private float speed = 0f;
+    [FormerlySerializedAs("speed")] [SerializeField] private float _speed = 0f;
 
     public List<Object> blocks;
+    private float _width = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +39,7 @@ public class BlockSpawner : MonoBehaviour
     void FixedUpdate()
     {
         var positionX = transform.position.x;
-        if (positionX + _objectWidth / 2 >= _screenRightBorder || positionX - _objectWidth / 2 <= _screenLeftBorder)
+        if (positionX >= _screenRightBorder || positionX <= _screenLeftBorder)
         {
             BounceDirection();
         }
@@ -77,7 +79,7 @@ public class BlockSpawner : MonoBehaviour
         LeanTween.cancel(gameObject);
         _isMovingRight = !_isMovingRight;
 
-        LeanTween.moveX(gameObject, _isMovingRight ? _screenRightBorder : _screenLeftBorder, speed * 2);
+        LeanTween.moveX(gameObject, _isMovingRight ? _screenRightBorder : _screenLeftBorder, _speed * 2);
     }
 
     private void IncrementHeight([CanBeNull] Block _)
@@ -98,10 +100,21 @@ public class BlockSpawner : MonoBehaviour
             new Vector3(p.x, p.y - 1f, p.z),
             Quaternion.identity,
             t).GetComponent<Block>();
+        _heldBlock.transform.localScale = new Vector3(_width, 1, 1);
+    }
+
+    public void SetSpeed(float speed)
+    {
+        _speed = speed;
+    }
+
+    public void SetNextBlockWidth(float width)
+    {
+        _width = width;
     }
 
     private void StartMovement()
     {
-        LeanTween.moveX(gameObject, _isMovingRight ? _screenRightBorder : _screenLeftBorder, speed);
+        LeanTween.moveX(gameObject, _isMovingRight ? _screenRightBorder : _screenLeftBorder, _speed);
     }
 }

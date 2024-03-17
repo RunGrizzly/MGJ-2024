@@ -25,12 +25,7 @@ public class Block : MonoBehaviour
         Owner = Brain.ins.RoundManager.CurrentRound.Player;
         Brain.ins.EventHandler.DropBlockEvent.AddListener(Drop);
     }
-
-    private void FixedUpdate()
-    {
-        CheckIfSettled();
-    }
-
+    
     private void Drop(Block _)
     {
         transform.parent = null;
@@ -53,8 +48,7 @@ public class Block : MonoBehaviour
         
         _settling = false;
         _settled = true;
-        Brain.ins.EventHandler.BlockSettledEvent.Invoke(this);
-        Brain.ins.EventHandler.DropBlockEvent.RemoveListener(Drop);
+
     }
 
     private void OnCollisionEnter(Collision other)
@@ -63,7 +57,10 @@ public class Block : MonoBehaviour
 
         if (other.gameObject.layer == 6)
         {
-            _settling = true;
+            FreezeBlock();
+            _settled = true;
+            Brain.ins.EventHandler.BlockSettledEvent.Invoke(this);
+            Brain.ins.EventHandler.DropBlockEvent.RemoveListener(Drop);
         }
     }
 
