@@ -230,10 +230,10 @@ MonoBehaviour:
   m_ShowCameraFrustum: 1
   m_IgnoreTimeScale: 0
   m_WorldUpOverride: {fileID: 0}
-  m_UpdateMethod: 2
-  m_BlendUpdateMethod: 1
+  m_UpdateMethod: 0
+  m_BlendUpdateMethod: 0
   m_DefaultBlend:
-    m_Style: 4
+    m_Style: 1
     m_Time: 0.3
     m_CustomCurve:
       serializedVersion: 2
@@ -1676,7 +1676,7 @@ MonoBehaviour:
   m_CenterOnActivate: 1
   m_GroupFramingSize: 0.95
   m_FramingMode: 2
-  m_FrameDamping: 0.15
+  m_FrameDamping: 0.2
   m_AdjustmentMode: 2
   m_MaxDollyIn: 5000
   m_MaxDollyOut: 5000

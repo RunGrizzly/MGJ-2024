@@ -77,9 +77,22 @@ public class Leaderboard : MonoBehaviour
         {
             _leaderboardFramer.m_Targets[0].target = floorBound;
         }
-        _leaderboardFramer.m_Targets[1].target = ceilingBound;
 
-        ceilingBound.position = block.transform.position;
+        if (_leaderboardFramer.m_Targets[1].target == null)
+        {
+            _leaderboardFramer.m_Targets[1].target = ceilingBound;
+        }
+
+
+        var targetPos = block.transform.position;
+        targetPos.x = 0;
+        targetPos.z = 0;
+
+        LeanTween.delayedCall(0.25f, () =>
+        {
+            LeanTween.move(ceilingBound.gameObject, targetPos, 0.35f).setEase(LeanTweenType.easeInExpo);
+        });
+
     }
 
     private void OnMedalEarned(Player player, MedalType medalType, int score)
