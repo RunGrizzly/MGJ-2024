@@ -3,10 +3,11 @@ using UnityEngine.Events;
 
 public enum MedalType
 {
-    WobbliestPlayer,
-    Effort,
     MostBlocks,
-    BiggestLoser
+    HighestPointReached,
+    BiggestLoser,
+    AnteUp,
+    Lucky,
 }
 
 public class MedalEarnedEvent : UnityEvent<Player, MedalType, int> { };
