@@ -1,8 +1,6 @@
 using Cinemachine;
-using Unity.Mathematics;
+using ScriptableObjects;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
-using UnityEngine.UI;
 
 public class Leaderboard : MonoBehaviour
 {
@@ -22,11 +20,10 @@ public class Leaderboard : MonoBehaviour
     [SerializeField] private CinemachineTargetGroup _leaderboardFramer = null;
     [SerializeField] private Transform floorBound = null;
     [SerializeField] private Transform ceilingBound = null;
+    [SerializeField] private GameHistory _gameHistory = null;
 
 
 
-
-    public SerializableDictionary<MedalType, Player> _medalMap = new();
     public SerializableDictionary<MedalType, MedalPanelElement> _medalPanelElements = new();
     public RectTransform _medalPanelElementList = null;
 
@@ -38,7 +35,10 @@ public class Leaderboard : MonoBehaviour
         Brain.ins.EventHandler.BlockSettledEvent.AddListener(OnBlockSettled);
         Brain.ins.EventHandler.EndRoundEvent.AddListener(OnRoundEnd);
 
-
+        foreach (var (key, value)  in _gameHistory.Medals)
+        {
+            OnMedalEarned(value, key);
+        }
     }
 
     private void OnDisable()
@@ -100,13 +100,13 @@ public class Leaderboard : MonoBehaviour
 
 
 
-        if (!_medalMap.Contains(medalType))
+        if (!_gameHistory.Medals.Contains(medalType))
         {
-            _medalMap.Add(medalType, player);
+            _gameHistory.Medals.Add(medalType, player);
         }
         else
         {
-            _medalMap[medalType] = player;
+            _gameHistory.Medals[medalType] = player;
         }
 
         // Debug.LogFormat("{0} achieved {1}", player.Name, medalType.ToString());
