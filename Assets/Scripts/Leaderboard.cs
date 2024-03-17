@@ -1,3 +1,4 @@
+using System;
 using Cinemachine;
 using ScriptableObjects;
 using UnityEngine;
@@ -92,6 +93,7 @@ public class Leaderboard : MonoBehaviour
         else
         {
             _medalPanelElements[medalType].NameBox.text = player.Name;
+            _medalPanelElements[medalType].MedalScore.text = score.ToString();
         }
 
 
