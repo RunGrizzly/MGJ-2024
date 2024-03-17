@@ -1,4 +1,5 @@
 ﻿using System;
+using ScriptableObjects;
 using UnityEngine;
 
 namespace DefaultNamespace
@@ -6,7 +7,7 @@ namespace DefaultNamespace
     [Serializable]
     public class DifficultyData
     {
-        public AnimationCurve SpawnerPositionCurve;
+        public Curve SpawnerPositionCurve;
         public AnimationCurve SpawnerSpeedCurve;
         public AnimationCurve SizeScaler;
         public float SeedWidth;
