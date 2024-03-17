@@ -11,10 +11,7 @@ public class RoundManager : MonoBehaviour
 
     private void Start()
     {
-        Brain.ins.EventHandler.DropBlockEvent.AddListener(block =>
-        {
-            CurrentRound.Blocks.Add(block);
-        });
+        Brain.ins.EventHandler.DropBlockEvent.AddListener(block => { CurrentRound.Blocks.Add(block); });
     }
 
     public void CreateRound()
@@ -32,7 +29,6 @@ public class RoundManager : MonoBehaviour
 
     public void StartRound()
     {
-
         CurrentRound.State = RoundState.InProgress;
         Brain.ins.EventHandler.StartRoundEvent.Invoke(CurrentRound);
         Brain.ins.EventHandler.SetMusicEvent.Invoke("game");
@@ -44,7 +40,8 @@ public class RoundManager : MonoBehaviour
         var ante = CurrentRound.Ante + 1;
         var round = new Round(ante, _sessionCount)
         {
-            StartHeight = point
+            StartHeight = point,
+            Player = CurrentRound.Player
         };
         CurrentRound = round;
 
@@ -65,6 +62,22 @@ public class RoundManager : MonoBehaviour
         else
         {
             CurrentRound.DestroyBlocks();
+            var rounds = CompletedRounds.Where(r => r.Session == CurrentRound.Session);
+            foreach (var round in rounds)
+            {
+                round.DestroyBlocks();
+            }
+
+            if (CurrentRound.Ante >= 2)
+            {
+                for (int i = 0; i < CurrentRound.Ante; i++)
+                {
+                    var lastRound = CompletedRounds.Last();
+                    lastRound.DestroyBlocks();
+                    lastRound.State = RoundState.Lost;
+                    Brain.ins.EventHandler.RoundLostEvent.Invoke(CurrentRound);
+                }
+            }
         }
 
         Brain.ins.SceneHandler.LoadScenes(new List<Scene> { Scene.RoundOver });

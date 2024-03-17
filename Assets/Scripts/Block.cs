@@ -97,6 +97,8 @@ public class Block : MonoBehaviour
         _rigidBody.isKinematic = true;
     }
 
+    public Rigidbody GetRigidbody() => _rigidBody;
+
     public Vector3 GetHighestPoint()
     {
         return _rigidBody.ClosestPointOnBounds(new Vector3(0, 100f, 0));
