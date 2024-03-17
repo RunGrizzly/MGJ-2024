@@ -449,13 +449,13 @@ MonoBehaviour:
       editorAssetGUID: 3a620415bdc2f974683711c4e647ed02
       name: Leaderboard
       _path: Assets/Scenes/Leaderboard.unity
-    loadInEditor: 0
+    loadInEditor: 1
     loadMethod: 3
   - scene:
       editorAssetGUID: 14c0773d62de1d944ae9b69e48c3c591
       name: Round
       _path: Assets/Scenes/Round.unity
-    loadInEditor: 0
+    loadInEditor: 1
     loadMethod: 3
   - scene:
       editorAssetGUID: c8f4db5123dcde1469220d1b2e774322
@@ -505,7 +505,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1102617510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -674,7 +674,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10.45
+  m_fontSize: 6.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -770,9 +770,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -889,7 +889,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.55
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1162,6 +1162,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c8ecb4544c6f140a8267a33be76c55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _startRoundSound: {fileID: 8300000, guid: 01fbd5a74c738d1499a2be3b23f0e071, type: 3}
+  _failRoundSound: {fileID: 8300000, guid: 01fbd5a74c738d1499a2be3b23f0e071, type: 3}
+  _passRoundSound: {fileID: 8300000, guid: 01fbd5a74c738d1499a2be3b23f0e071, type: 3}
+  _anteUpSound: {fileID: 8300000, guid: 01fbd5a74c738d1499a2be3b23f0e071, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

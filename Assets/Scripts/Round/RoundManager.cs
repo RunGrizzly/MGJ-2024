@@ -10,6 +10,11 @@ public class RoundManager : MonoBehaviour
     public Round CurrentRound { get; set; } = null;
     private int _sessionCount = 0;
 
+    [SerializeField] private AudioClip _startRoundSound = null;
+    [SerializeField] private AudioClip _failRoundSound = null;
+    [SerializeField] private AudioClip _passRoundSound = null;
+    [SerializeField] private AudioClip _anteUpSound = null;
+
     private void Start()
     {
         Brain.ins.EventHandler.DropBlockEvent.AddListener(block => { CurrentRound.Blocks.Add(block); });
@@ -33,10 +38,21 @@ public class RoundManager : MonoBehaviour
         CurrentRound.State = RoundState.InProgress;
         Brain.ins.EventHandler.StartRoundEvent.Invoke(CurrentRound);
         Brain.ins.EventHandler.SetMusicEvent.Invoke("game");
+
+        if (_startRoundSound != null)
+        {
+            Brain.ins.EventHandler.PlaySFXEvent.Invoke(_startRoundSound, 0);
+        }
     }
 
     public void UpTheAnte()
     {
+
+        if (_anteUpSound != null)
+        {
+            Brain.ins.EventHandler.PlaySFXEvent.Invoke(_anteUpSound, 0);
+        }
+
         var point = CurrentRound.Blocks.Last().GetHighestPoint().y;
         var ante = CurrentRound.Ante + 1;
         var round = new Round(ante, _sessionCount)
@@ -59,9 +75,19 @@ public class RoundManager : MonoBehaviour
         if (hasPassed)
         {
             CurrentRound.FreezeBlocks();
+            if (_passRoundSound != null)
+            {
+                Brain.ins.EventHandler.PlaySFXEvent.Invoke(_passRoundSound, 0);
+            }
         }
         else
         {
+            if (_failRoundSound != null)
+            {
+                Brain.ins.EventHandler.PlaySFXEvent.Invoke(_failRoundSound, 0);
+            }
+
+
             CurrentRound.DestroyBlocks();
             var rounds = CompletedRounds.Where(r => r.Session == CurrentRound.Session);
             foreach (var round in rounds)
