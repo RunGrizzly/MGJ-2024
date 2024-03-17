@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Cinemachine;
 using ScriptableObjects;
 using UnityEngine;
@@ -32,7 +33,7 @@ public class Leaderboard : MonoBehaviour
         Brain.ins.EventHandler.BlockSettledEvent.AddListener(OnBlockSettled);
         Brain.ins.EventHandler.EndRoundEvent.AddListener(OnRoundEnd);
 
-        foreach (var (key, value) in _gameHistory.Medals)
+        foreach (var (key, value) in _gameHistory.Medals.ToList())
         {
             OnMedalEarned(value.Player, key, value.Score);
         }

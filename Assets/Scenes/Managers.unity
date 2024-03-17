@@ -449,7 +449,7 @@ MonoBehaviour:
       editorAssetGUID: 3a620415bdc2f974683711c4e647ed02
       name: Leaderboard
       _path: Assets/Scenes/Leaderboard.unity
-    loadInEditor: 1
+    loadInEditor: 0
     loadMethod: 3
   - scene:
       editorAssetGUID: 14c0773d62de1d944ae9b69e48c3c591
@@ -674,7 +674,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10.4
+  m_fontSize: 6.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
