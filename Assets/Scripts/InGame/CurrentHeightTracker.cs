@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CurrentHeightTracker : MonoBehaviour
 {
-    private Vector3 _currentHighestPoint;
+    private Vector3 _currentHighestPoint = Vector3.zero;
     private bool _isDisplaying = false;
     [SerializeField] private ScreenLabel _display;
 
@@ -29,6 +29,7 @@ public class CurrentHeightTracker : MonoBehaviour
     private void OnStartRound(Round round)
     {
         _isDisplaying = true;
+        _display.SetText(StringFormat.FormatDistance(_currentHighestPoint.y));
         _display.Show();
     }
 
