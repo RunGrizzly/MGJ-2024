@@ -22,7 +22,7 @@ public class SceneHandler : MonoBehaviour
             Display.displays[i].Activate();
         }
 
-        LoadScenes(new List<Scene> { Scene.MainMenu, Scene.Leaderboard , Scene.Round, Scene.GameScene,});
+        LoadScenes(new List<Scene> { Scene.MainMenu, Scene.Leaderboard, Scene.Round, Scene.GameScene, });
     }
 
     public void LoadScenes(List<string> sceneNames)
