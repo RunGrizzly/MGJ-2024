@@ -10,6 +10,7 @@ public class NameBanditSection : MonoBehaviour
     [SerializeField] private WordList _wordList;
     [SerializeField] private WordType _wordType = WordType.Verb;
     [SerializeField] private float _delay = 0.25f;
+    [field: SerializeField] public RectTransform RectTransform { get; set; } = null;
     private float _summit = 0f;
     private int _index = 0;
     [SerializeField] private TMP_Text _text;

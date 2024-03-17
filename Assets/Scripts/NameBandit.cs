@@ -9,6 +9,22 @@ public class NameBandit : MonoBehaviour
     private bool nameChosen = false;
 
     [SerializeField] private List<AudioClip> sectionBlips = new List<AudioClip>();
+    [SerializeField] private RectTransform _buttonUITemplate = null;
+    private RectTransform _buttonUIInstance = null;
+
+    private int buttonMoveTween = -99;
+
+    private void Start()
+    {
+        // if (_buttonUIInstance != null)
+        // {
+        //     Destroy(_buttonUIInstance.gameObject);
+        // }
+
+        _buttonUIInstance = Instantiate(_buttonUITemplate, transform);
+
+        _buttonUIInstance.anchoredPosition = _sections[0].RectTransform.anchoredPosition;
+    }
 
     private void Update()
     {
@@ -16,12 +32,49 @@ public class NameBandit : MonoBehaviour
 
         if (Brain.ins.Controls.Player.Everything.WasPressedThisFrame())
         {
+
             var word = _sections[_chosenSectionCount].Stop();
             _chosenWords.Add(word);
 
-                Brain.ins.EventHandler.PlaySFXEvent.Invoke(sectionBlips[+_chosenSectionCount], 0);
+            Brain.ins.EventHandler.PlaySFXEvent.Invoke(sectionBlips[+_chosenSectionCount], 0);
 
             _chosenSectionCount += 1;
+
+
+
+            if (_chosenSectionCount < _sections.Count)
+            {
+                var newTargetPosition = _sections[_chosenSectionCount].RectTransform.anchoredPosition;
+
+                // /newTargetPosition.x /= 2;
+                newTargetPosition.y -= 250f;
+
+
+                LeanTween.cancel(buttonMoveTween);
+
+                buttonMoveTween = LeanTween.move(_buttonUIInstance, newTargetPosition, 0.35f).setEase(LeanTweenType.easeOutExpo).id;
+
+
+                //    / _buttonUIInstance.anchoredPosition = newTargetPosition;
+            }
+
+            else
+            {
+
+                var newTargetPosition = _sections[_sections.Count / 2].RectTransform.anchoredPosition;
+
+                // /newTargetPosition.x /= 2;
+                newTargetPosition.y -= 250f;
+
+                LeanTween.cancel(buttonMoveTween);
+
+                buttonMoveTween = LeanTween.move(_buttonUIInstance, newTargetPosition, 0.35f).setEase(LeanTweenType.easeOutExpo).id;
+
+                // /_buttonUIInstance.anchoredPosition = newTargetPosition;
+
+
+                //Destroy(_buttonUIInstance.gameObject);
+            }
         }
 
         if (_chosenSectionCount == _sections.Count)

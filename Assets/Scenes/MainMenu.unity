@@ -301,11 +301,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5362771336139640348, guid: 4d1d568ce9b2e9d4ab1c0bb908ba18dd,
-        type: 3}
-      propertyPath: _wordType
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -359,6 +354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 597cfb8954c975846b58cb07f27adaa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _callToAction: {fileID: 2016995228}
 --- !u!4 &423838491
 Transform:
   m_ObjectHideFlags: 0
@@ -1229,8 +1225,8 @@ RectTransform:
   - {fileID: 1445436854}
   m_Father: {fileID: 1165345860}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.052769195, y: 0.3971509}
-  m_AnchorMax: {x: 0.9491346, y: 0.54926246}
+  m_AnchorMin: {x: 0, y: 0.14299956}
+  m_AnchorMax: {x: 1, y: 0.54926246}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1254,6 +1250,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a2b4daa11145c6443996c6fb58c24899, type: 3}
   - {fileID: 8300000, guid: 22321fc31601c564b9808c7495f56070, type: 3}
   - {fileID: 8300000, guid: 0627819dbbdb95f458481cb559bb67ec, type: 3}
+  _buttonUITemplate: {fileID: 4738769193353202137, guid: 7dfd43dd438bbdb4392a97dd11667558,
+    type: 3}
 --- !u!114 &1420425450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1274,7 +1272,7 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 150, y: 100}
+  m_CellSize: {x: 350, y: 250}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 3
@@ -1451,8 +1449,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1165345860}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.052769195, y: 0.54926246}
-  m_AnchorMax: {x: 0.95918506, y: 0.595709}
+  m_AnchorMin: {x: 0, y: 0.4791187}
+  m_AnchorMax: {x: 1, y: 0.595709}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
