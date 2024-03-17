@@ -24,6 +24,7 @@ public class EventHandler : MonoBehaviour
         RoundCreatedEvent ??= new();
         StartRoundEvent ??= new();
         EndRoundEvent ??= new();
+        RoundLostEvent ??= new();
         PlayerCreatedEvent ??= new();
         DropBlockEvent ??= new();
         BlockSettledEvent ??= new();

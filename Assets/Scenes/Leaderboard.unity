@@ -373,7 +373,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-972068
+  m_Name: pb_Mesh-2155274
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -542,6 +542,7 @@ GameObject:
   m_Component:
   - component: {fileID: 359768473}
   - component: {fileID: 359768472}
+  - component: {fileID: 359768474}
   m_Layer: 0
   m_Name: Leaderboard
   m_TagString: Untagged
@@ -577,7 +578,7 @@ MonoBehaviour:
   _medalPanelElements:
     m_keys: 
     m_values: []
-  _medalPanelElementList: {fileID: 0}
+  _medalPanelElementList: {fileID: 514046606}
 --- !u!4 &359768473
 Transform:
   m_ObjectHideFlags: 0
@@ -596,6 +597,18 @@ Transform:
   - {fileID: 1993870761}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &359768474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359768471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5496bfcd16e24505b0808a1ae5d4c659, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &514046605
 GameObject:
   m_ObjectHideFlags: 0
