@@ -73,7 +73,10 @@ public class Leaderboard : MonoBehaviour
 
     private void OnBlockSettled(Block block)
     {
-        _leaderboardFramer.m_Targets[0].target = floorBound;
+        if (_leaderboardFramer.m_Targets[0].target == null)
+        {
+            _leaderboardFramer.m_Targets[0].target = floorBound;
+        }
         _leaderboardFramer.m_Targets[1].target = ceilingBound;
 
         ceilingBound.position = block.transform.position;

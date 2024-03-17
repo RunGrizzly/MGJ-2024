@@ -13,25 +13,25 @@ MonoBehaviour:
   m_Name: DefaultDifficulty
   m_EditorClassIdentifier: 
   _difficultyData:
-  - SpawnerPositionCurve: {fileID: 11400000, guid: b054dc54fa35b234593d7bf882cd5265,
+  - SpawnerPositionCurve: {fileID: 11400000, guid: b33cf6abe9e43f44d8985db60ffe4c0a,
       type: 2}
     SpawnerSpeedCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 0.2
-        inSlope: 0.6
-        outSlope: 0.6
+        time: -0.013566641
+        value: 0.25354382
+        inSlope: 0.8414019
+        outSlope: 0.8414019
         tangentMode: 34
         weightedMode: 0
         inWeight: 0
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1
-        value: 0.8
-        inSlope: 0.6
-        outSlope: 0.6
+        time: 0.9880371
+        value: 1.0962951
+        inSlope: 0.8414019
+        outSlope: 0.8414019
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
@@ -64,25 +64,25 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     SeedWidth: 1
-  - SpawnerPositionCurve: {fileID: 11400000, guid: b054dc54fa35b234593d7bf882cd5265,
+  - SpawnerPositionCurve: {fileID: 11400000, guid: b33cf6abe9e43f44d8985db60ffe4c0a,
       type: 2}
     SpawnerSpeedCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 0.2
-        inSlope: 0.6
-        outSlope: 0.6
+        time: -0.013566641
+        value: 0.25354382
+        inSlope: 0.8414019
+        outSlope: 0.8414019
         tangentMode: 34
         weightedMode: 0
         inWeight: 0
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1
-        value: 0.8
-        inSlope: 0.6
-        outSlope: 0.6
+        time: 0.9880371
+        value: 1.0962951
+        inSlope: 0.8414019
+        outSlope: 0.8414019
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
@@ -115,25 +115,25 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     SeedWidth: 1
-  - SpawnerPositionCurve: {fileID: 11400000, guid: b054dc54fa35b234593d7bf882cd5265,
+  - SpawnerPositionCurve: {fileID: 11400000, guid: b33cf6abe9e43f44d8985db60ffe4c0a,
       type: 2}
     SpawnerSpeedCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 0.2
-        inSlope: 0.6
-        outSlope: 0.6
+        time: -0.013566641
+        value: 0.25354382
+        inSlope: 0.8414019
+        outSlope: 0.8414019
         tangentMode: 34
         weightedMode: 0
         inWeight: 0
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1
-        value: 0.8
-        inSlope: 0.6
-        outSlope: 0.6
+        time: 0.9880371
+        value: 1.0962951
+        inSlope: 0.8414019
+        outSlope: 0.8414019
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
@@ -166,25 +166,25 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     SeedWidth: 1
-  - SpawnerPositionCurve: {fileID: 11400000, guid: b054dc54fa35b234593d7bf882cd5265,
+  - SpawnerPositionCurve: {fileID: 11400000, guid: b33cf6abe9e43f44d8985db60ffe4c0a,
       type: 2}
     SpawnerSpeedCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 0.2
-        inSlope: 0.6
-        outSlope: 0.6
+        time: -0.013566641
+        value: 0.25354382
+        inSlope: 0.8414019
+        outSlope: 0.8414019
         tangentMode: 34
         weightedMode: 0
         inWeight: 0
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1
-        value: 0.8
-        inSlope: 0.6
-        outSlope: 0.6
+        time: 0.9880371
+        value: 1.0962951
+        inSlope: 0.8414019
+        outSlope: 0.8414019
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
@@ -217,25 +217,25 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     SeedWidth: 1
-  - SpawnerPositionCurve: {fileID: 11400000, guid: b054dc54fa35b234593d7bf882cd5265,
+  - SpawnerPositionCurve: {fileID: 11400000, guid: b33cf6abe9e43f44d8985db60ffe4c0a,
       type: 2}
     SpawnerSpeedCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 0.2
-        inSlope: 0.6
-        outSlope: 0.6
+        time: -0.013566641
+        value: 0.25354382
+        inSlope: 0.8414019
+        outSlope: 0.8414019
         tangentMode: 34
         weightedMode: 0
         inWeight: 0
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1
-        value: 0.8
-        inSlope: 0.6
-        outSlope: 0.6
+        time: 0.9880371
+        value: 1.0962951
+        inSlope: 0.8414019
+        outSlope: 0.8414019
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
