@@ -31,7 +31,7 @@ public class Block : MonoBehaviour
         CheckIfSettled();
     }
 
-    private void Drop()
+    private void Drop(Block _)
     {
         transform.parent = null;
         _rigidBody.isKinematic = false;
@@ -45,6 +45,12 @@ public class Block : MonoBehaviour
 
         if (_settleTimer > 0) return;
 
+        if (!_rigidBody.IsSleeping())
+        {
+            _settleTimer = timeToSettle / 2;
+            return;
+        }
+        
         _settling = false;
         _settled = true;
         Brain.ins.EventHandler.BlockSettledEvent.Invoke(this);

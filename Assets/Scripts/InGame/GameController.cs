@@ -31,7 +31,7 @@ namespace DefaultNamespace
 
         private void OnStartRound(Round round)
         {
-            _floor.transform.position = new Vector3(_floor.transform.position.x, round.StartHeight - 1f, _floor.transform.position.z);
+            _floor.transform.position = new Vector3(_floor.transform.position.x, round.StartHeight - 3f, _floor.transform.position.z);
             _floor.GetComponent<Collider>().enabled = true;
             
             _target.transform.position = new Vector3(_target.transform.position.x, round.StartHeight + round.Height, _target.transform.position.z);
