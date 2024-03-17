@@ -5,7 +5,7 @@ public class LeaderboardLabel : MonoBehaviour
 {
     [field: SerializeField] public TextMeshProUGUI NameBox { get; set; } = null;
 
-    private Round _round;
+    public Round Round;
 
     private void OnEnable()
     {
@@ -14,7 +14,7 @@ public class LeaderboardLabel : MonoBehaviour
 
     private void OnRoundLost(Round round)
     {
-        if (round == _round)
+        if (round == Round)
         {
             Destroy(gameObject);
         }

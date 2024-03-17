@@ -67,6 +67,7 @@ public class Leaderboard : MonoBehaviour
             newLabel.transform.position = labelPos;
 
             newLabel.NameBox.text = round.Player.Name;
+            newLabel.Round = round;
         }
     }
 
