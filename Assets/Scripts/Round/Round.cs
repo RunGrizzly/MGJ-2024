@@ -25,22 +25,23 @@ public class Round
         Ante = ante;
         Session = session;
 
-        Height = Ante switch
-        {
-            2 => 20,
-            >= 3 => 30,
-            _ => Height
-        };
+        // Height = Ante switch
+        // {
+        //     2 => 20,
+        //     >= 3 => 30,
+        //     _ => Height
+        // };
     }
 
     public void DestroyBlocks()
     {
         foreach (var block in Blocks)
         {
-            var rb = block.GetRigidbody();
-            rb.isKinematic = false;
-            var direction = rb.gameObject.transform.position - Camera.main.transform.position;
-            rb.AddForce(direction.normalized * -5000f);
+            block.Destroy();
+            // var rb = block.GetRigidbody();
+            // rb.isKinematic = false;
+            // var direction = rb.gameObject.transform.position - Camera.main.transform.position;
+            // rb.AddForce(direction.normalized * -5000f);
         }
     }
     public void FreezeBlocks()

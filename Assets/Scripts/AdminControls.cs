@@ -25,6 +25,6 @@ public class AdminControls : MonoBehaviour
 
     public void TriggerWasterMedal()
     {
-        Brain.ins.EventHandler.MedalEarnedEvent.Invoke(Brain.ins.RoundManager.CurrentRound.Player, MedalType.Waster);
+        Brain.ins.EventHandler.MedalEarnedEvent.Invoke(Brain.ins.RoundManager.CurrentRound.Player, MedalType.BiggestLoser);
     }
 }

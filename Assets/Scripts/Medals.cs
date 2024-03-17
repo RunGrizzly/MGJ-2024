@@ -6,7 +6,7 @@ public enum MedalType
     WobbliestPlayer,
     Effort,
     MostBlocks,
-    Waster
+    BiggestLoser
 }
 
 public class MedalEarnedEvent : UnityEvent<Player, MedalType> { };

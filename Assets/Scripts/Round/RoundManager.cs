@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -70,7 +71,7 @@ public class RoundManager : MonoBehaviour
 
             if (CurrentRound.Ante >= 2)
             {
-                for (int i = 0; i < CurrentRound.Ante; i++)
+                for (int i = 1; i <= Math.Min(CurrentRound.Ante, CompletedRounds.Count); i++)
                 {
                     var lastRound = CompletedRounds.Last();
                     lastRound.DestroyBlocks();

@@ -82,12 +82,12 @@ public class Block : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == 8)
+        if (other.gameObject.layer == 8 && !_rigidBody.isKinematic)
         {
-            if (!_rigidBody.isKinematic)
+            other.enabled = false;
+            if (Brain.ins.RoundManager.CurrentRound.State == RoundState.InProgress)
             {
                 Brain.ins.RoundManager.EndRound(false);
-                other.enabled = false;
             }
         }
     }
